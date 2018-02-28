@@ -1,0 +1,133 @@
+<project name="webOper" default="compile">
+	<property name="sourcedir" value="${basedir}/src" />
+	<property name="targetdir" value="${basedir}/bin" />
+	<property name="librarydir" value="${basedir}/WebContent/WEB-INF/lib" />
+	<property name="tomcatdir" value="C:/tomcat6/webapps/" />
+	<property name="tomcat.home" value="C:/tomcat6" />
+	<property name="web-inf" value="${basedir}/WebContent/WEB-INF" />
+	<path id="libraries">
+		<fileset dir="${librarydir}">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<target name="clean">
+		<delete dir="${targetdir}" />
+		<mkdir dir="${targetdir}" />
+	</target>
+	<target name="compile" depends="clean, copy-resources">
+		<javac srcdir="${sourcedir}" destdir="${targetdir}" classpathref="libraries" />
+	</target>
+	<target name="copy-resources">
+		<copy todir="${targetdir}">
+			<fileset dir="${sourcedir}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="war" depends="compile">
+		<war destfile="webOper.war" webxml="${web-inf}/web.xml">
+			<lib dir="${librarydir}">
+				<exclude name="servlet*.jar" />
+			</lib>
+			<webinf dir="${web-inf}">
+				<include name="**/*.*" />
+			</webinf>
+			<classes dir="${targetdir}" />
+			<fileset dir="${basedir}">
+				<include name="**/*.jsp" />
+				<include name="**/*.html" />
+				<include name="**/*.htm" />
+				<include name="**/*.css" />
+				<include name="**/*.jpg" />
+				<include name="**/*.gif" />
+				<include name="**/*.jspf" />
+				<include name="**/*.jasper" />
+				<include name="**/*.png" />
+				<include name="**/*.js" />
+				<include name="**/*.ftl" />
+			</fileset>
+		</war>
+	</target>
+	<target name="copy_war_to_tomcat" depends="stopTomcat, war">
+		<delete dir="${tomcatdir}/webOper" />
+		<copy todir="${tomcatdir}" overwrite="true">
+			<fileset dir="${basedir}">
+				<filename name="webOper.war" />
+			</fileset>
+		</copy>
+		<exec executable="${tomcat.home}/bin/startup.bat" append="true" />
+	</target>
+	<target name="stopTomcat">
+		<exec executable="${tomcat.home}/bin/shutdown.bat" append="true">
+			<arg value="-S" />
+		</exec>
+	</target>
+	<target name="iniciaTomcat">
+		<exec executable="${tomcat.home}/bin/startup.bat" append="true" />
+	</target>
+	<target name="atualizaJSP">
+		<copy todir="${tomcatdir}/webOper" overwrite="true">
+			<fileset dir="${basedir}/webContent">
+				<include name="**/*.jsp" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="atualizaClasses" depends="compile">
+		<copy todir="${tomcatdir}/webDoc/WEB-INF/classes" overwrite="true">
+			<fileset dir="${basedir}/bin">
+				<include name="**/*.class" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="atualizaRelatorios">
+		<copy todir="${tomcatdir}/webOper" overwrite="true">
+			<fileset dir="${basedir}">
+				<include name="**/*.jasper" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="atualizaJSeFTL">
+		<copy todir="${tomcatdir}/webOper" overwrite="true">
+			<fileset dir="${basedir}">
+				<include name="**/*.js" />
+				<include name="**/*.ftl" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="atualizaIMG">
+		<copy todir="${tomcatdir}/webOper" overwrite="true">
+			<fileset dir="${basedir}">
+				<include name="**/*.jpg" />
+				<include name="**/*.png" />
+				<include name="**/*.gif" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="atualizaArquivos">
+		<copy todir="${tomcatdir}/webOper" overwrite="true">
+			<fileset dir="${basedir}">
+				<include name="**/*.html" />
+				<include name="**/*.htm" />
+				<include name="**/*.css" />
+				<include name="**/*.jpg" />
+				<include name="**/*.gif" />
+				<include name="**/*.js" />
+				<include name="**/*.jasper" />
+				<include name="**/*.png" />
+				<include name="**/*.ftl" />
+			</fileset>
+		</copy>
+		<copy todir="${tomcatdir}/webOper/WEB-INF" overwrite="true">
+			<fileset dir="${web-inf}">
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+	</target>
+	<target name="atualizaCSS">
+		<copy todir="${tomcatdir}/webOper" overwrite="true">
+			<fileset dir="${basedir}">
+				<include name="**/*.css" />
+			</fileset>
+		</copy>
+	</target>
+</project>

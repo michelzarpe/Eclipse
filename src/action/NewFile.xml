@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sidxml>
+	<param retorno='XML' />
+	<sid acao='SID.Srv.AltEmpFil' retorno='retAltEmp'>
+		<param nome='CODEMP' valor='6' />
+		<param nome='CODFIL' valor='1' />
+	</sid>
+	<sid acao='SID.Est.Requisitar' retorno='Retorno'>
+		<param nome='SEQEME' valor='1' />
+		<param nome='CODPRO' valor='ME0036' />
+		<param nome='QTDEME' valor='2.0' />
+		<param nome='QTDAPR' valor='2.0' />
+		<param nome='CCURES' valor='20' />
+		<param nome='OBSEME' valor='' />
+		<param nome='SITEME' valor='2' />
+		<param nome='CTAFIN' valor='5158' />
+		<param nome='CODDEP' valor='101' />
+	</sid>
+	<sid acao='SID.SRV.REGRA' retorno='RET_NUMEME'>
+		<param nome='NUMREG' valor='117' />
+		<param nome='vAlfaNumEme' valor='@Retorno' />
+	</sid>
+	<sid acao='SID.Est.Requisitar' retorno='Retorno'>
+		<param nome='NUMEME' valor='@RET_NUMEME' />
+		<param nome='SEQEME' valor='2' />
+		<param nome='CODPRO' valor='ME0007' />
+		<param nome='QTDEME' valor='1.0' />
+		<param nome='QTDAPR' valor='1.0' />
+		<param nome='CCURES' valor='20' />
+		<param nome='OBSEME' valor='' />
+		<param nome='SITEME' valor='2' />
+		<param nome='CTAFIN' valor='5158' />
+		<param nome='CODDEP' valor='101' />
+	</sid>
+	<sid acao='SID.Est.Requisitar' retorno='Retorno'>
+		<param nome='NUMEME' valor='@RET_NUMEME' />
+		<param nome='SEQEME' valor='3' />
+		<param nome='CODPRO' valor='ME0072' />
+		<param nome='QTDEME' valor='25.0' />
+		<param nome='QTDAPR' valor='25.0' />
+		<param nome='CCURES' valor='20' />
+		<param nome='OBSEME' valor='' />
+		<param nome='SITEME' valor='2' />
+		<param nome='CTAFIN' valor='5158' />
+		<param nome='CODDEP' valor='101' />
+	</sid>
+	<sid acao='SID.Est.Requisitar' retorno='Retorno'>
+		<param nome='NUMEME' valor='@RET_NUMEME' />
+		<param nome='SEQEME' valor='4' />
+		<param nome='CODPRO' valor='ME0016' />
+		<param nome='QTDEME' valor='1.0' />
+		<param nome='QTDAPR' valor='1.0' />
+		<param nome='CCURES' valor='20' />
+		<param nome='OBSEME' valor='' />
+		<param nome='SITEME' valor='2' />
+		<param nome='CTAFIN' valor='5158' />
+		<param nome='CODDEP' valor='101' />
+	</sid>
+	<sid acao='SID.Est.Requisitar' retorno='Retorno'>
+		<param nome='NUMEME' valor='@RET_NUMEME' />
+		<param nome='SEQEME' valor='5' />
+		<param nome='CODPRO' valor='ME0021' />
+		<param nome='QTDEME' valor='1.0' />
+		<param nome='QTDAPR' valor='1.0' />
+		<param nome='CCURES' valor='20' />
+		<param nome='OBSEME' valor='' />
+		<param nome='SITEME' valor='2' />
+		<param nome='CTAFIN' valor='5158' />
+		<param nome='CODDEP' valor='101' />
+	</sid>
+	<sid acao='SID.Est.Requisitar' retorno='Retorno'>
+		<param nome='NUMEME' valor='@RET_NUMEME' />
+		<param nome='SEQEME' valor='6' />
+		<param nome='CODPRO' valor='ME0023' />
+		<param nome='QTDEME' valor='3.0' />
+		<param nome='QTDAPR' valor='3.0' />
+		<param nome='CCURES' valor='20' />
+		<param nome='OBSEME' valor='' />
+		<param nome='SITEME' valor='2' />
+		<param nome='CTAFIN' valor='5158' />
+		<param nome='CODDEP' valor='101' />
+	</sid>
+	<sid acao='SID.Est.Requisitar' retorno='Retorno'>
+		<param nome='NUMEME' valor='@RET_NUMEME' />
+		<param nome='SEQEME' valor='7' />
+		<param nome='CODPRO' valor='ME0030' />
+		<param nome='QTDEME' valor='1.0' />
+		<param nome='QTDAPR' valor='1.0' />
+		<param nome='CCURES' valor='20' />
+		<param nome='OBSEME' valor='' />
+		<param nome='SITEME' valor='2' />
+		<param nome='CTAFIN' valor='5158' />
+		<param nome='CODDEP' valor='101' />
+	</sid>
+</sidxml>

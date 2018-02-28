@@ -1,0 +1,17 @@
+{ label: 'name',
+  identifier: 'name',
+   items: [
+     { name:'Falta Injustificada', type:'motivo'},
+     { name:'Falta Justificada', type: 'motivo',
+        children: [
+           {_reference: 'Reciclagem'},
+           {_reference:'Treinamentos Diversos'},
+           {_reference:'Atestado'}
+        ]
+     },
+     { name:'Reciclagem', type:'subTipo' },
+     { name:'Treinamentos Diversos', type:'subTipo' },
+     { name:'Atestado', type:'subTipo' },
+     { name:'Férias', type: 'motivo'}
+    ]
+}

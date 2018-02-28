@@ -1,0 +1,89 @@
+body {
+	padding: 0;
+	margin: 0;
+	font: menu;
+	line-height: 1.6em;
+	background: #fff;
+}
+
+h1 {
+	font: medium;
+	margin: 0;
+	letter-spacing: -1px;
+}
+
+h2 {
+	font: bold 2em Arial, Sans-Serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 a,h2 a {
+	color: #2b2b2b;
+	background: #fff;
+	text-decoration: none;
+}
+
+h1 a:hover,h2 a:hover {
+	color: #2b2b2b;
+	background: #FFF;
+}
+
+.title {
+	color: #808080;
+	background: #fff;
+}
+
+form {
+	margin: 0;
+}
+
+input.button {
+	padding: 3px;
+}
+
+/*espa�amento do conte�do */
+#content {
+	margin: 10px auto;
+	width: 960px;
+}
+
+/* logo webOper canto superior esquerdo */
+#logo {
+	padding: 15px 0 0 8px;
+}
+
+#logo p {
+	margin: 0;
+	padding: 0 0 0 10px;
+	color: #808080;
+	background: #fff;
+}
+
+/** texto superior direito **/
+#top_info {
+	float: right;
+	width: 570px;
+	margin: 20px 5px 0 0;
+	text-align: right;
+}
+
+/* imagem azul no topo */
+#tabs {
+	background: #fff url(images/bigbox.gif) no-repeat top left;
+	color: #000;
+	text-align: center;
+	font-size: 10px;
+}
+
+/* campos de entrada */
+input,select,textarea {
+	color: #1E67A8;
+	font: menu;
+}
+
+/* mensagem de erro de login */
+.errorMessage {
+	font: menu;
+	width: 50%;
+}

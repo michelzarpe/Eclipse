@@ -1,0 +1,28 @@
+<?xml version ="1.0" encoding="ISO-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Ajax na Prática</title>
+<link href="estilo.css" rel="stylesheet" type="text/css" />
+<SCRIPT src="script.js" type="text/javascript"></SCRIPT>
+</head>
+<body>
+	<DIV id="bnc">
+		<FORM id="form1" method="post" action="" onsubmit="return enviar_form(this)">
+			<FIELDSET>
+				<LEGEND>Cadastro de Banco</LEGEND>
+				<LABEL for="id">Id</LABEL>
+				<INPUT type="text" name="id" id="id" class="campo" size="5" />
+				<br/>
+				<LABEL for="nomBan">Banco</LABEL>
+				<INPUT type="text" name="nomBan" id="nomBan" class="campo" size="20" />
+				<br/>
+				<INPUT type="submit" name="enviar" id="enviar" value="Enviar" />
+				<br/>
+				<SPAN id="msg"></SPAN>
+			</FIELDSET>
+		</FORM>
+	</DIV>
+</body>
+</html>

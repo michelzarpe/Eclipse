@@ -1,0 +1,148 @@
+@CHARSET "ISO-8859-1";
+
+#south {
+	font: .7em Tahoma, Arial, sans-serif;
+}
+
+input,select,textarea {
+	color: #1E67A8;
+	background-color: #E4F5FC;
+	font: menu;
+	text-transform: uppercase;
+	border: 1pt solid;
+}
+
+.msgErro {
+	color: red;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #FFC1C1;
+	width: 300px;
+}
+
+.msgOK {
+	color: green;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #98FB98;
+	width: 300px;
+}
+
+.errorMessage {
+	font: menu;
+	width: 300px;
+}
+
+.divLista {
+	text-align: left;
+	font: menu;
+}
+
+.corLiberado {
+	font-style: italic;
+	color: 	#0000a0;
+}
+
+.corBloqueado {
+	font-style: italic;
+	color: #FF0000;
+}
+
+.corIntegrado {
+	font-style: italic;
+	color: #000000;
+}
+
+.corHomologado {
+	font-style: italic;
+	color: #00CC00;
+}
+
+
+.corNaoAtendido {
+	font-style: italic;
+	color: #FF6600;
+}
+
+
+
+h1,h3,h4,h5,h6 {
+	font-family: tahoma, verdana;
+	color: #333333;;
+	display: block;
+	white-space: normal;
+	font-size: 11px;
+	font-size-adjust: none;
+	font-size-adjust: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: normal;
+}
+
+h2 {
+	color: #555555;
+	font-family: arial, tahoma, helvetica, sans-serif;
+	font-size: 11px;
+	font-size-adjust: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+}
+
+.x-grid3-invalid-cell {
+	background: transparent
+		url(resources/images/default/grid/invalid_line.gif) repeat-x bottom;
+}
+
+.x-form-itemCentro {
+	font-family:sans-serif;
+	font-size: 9px;
+	font-size-adjust: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+.x-form-check-wrap {
+	height: 15px;
+	line-height: 15px;
+	width: 100px;
+}
+
+.x-fieldset {
+	border: 1px solid;
+	display: block;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+.x-form-field {
+	-x-system-font: none;
+	font-family: sans-serif;
+	font-size: 11px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+}
+
+.x-form-item {
+	font-family: sans-serif;
+	font-size: 11px;
+	font-size-adjust: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: normal;
+}
+.x-grid3-row-table{
+	text-transform: uppercase;
+}

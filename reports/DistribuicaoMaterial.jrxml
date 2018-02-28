@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DistribuicaoMaterial" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="67fc8446-c2cd-4a17-9c16-7f7bcdf4cf80">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="cmpReq" class="java.lang.String"/>
+	<parameter name="tipoMaterial" class="java.lang.String"/>
+	<queryString language="hql">
+		<![CDATA[select req.cmpReq as cmpReq,  req.numEme as numEme, req.seqEme as seqEme,
+cen.id as idCentro, usu.codUsu as codUsu, req.qtdApr as qtdApr, req.qtdEme as qtdEme, pro.desPro as desPro, cen.nomCcu as nomCcu, pro.tipPro as tipPro, req.setor as setor, pro.id as idPro
+from bean.RequisicaoEstoque as req
+inner join req.usuSol as usu
+inner join req.centro as cen
+inner join req.produto as pro
+where req.cmpReq=$P{cmpReq} and pro.tipPro=$P{tipoMaterial}
+order by cen.id, usu.codUsu, pro.desPro]]>
+	</queryString>
+	<field name="cmpReq" class="java.lang.String"/>
+	<field name="numEme" class="java.lang.Integer"/>
+	<field name="seqEme" class="java.lang.Integer"/>
+	<field name="idCentro" class="java.lang.Integer"/>
+	<field name="codUsu" class="java.lang.String"/>
+	<field name="qtdApr" class="java.lang.Double"/>
+	<field name="qtdEme" class="java.lang.Double"/>
+	<field name="desPro" class="java.lang.String"/>
+	<field name="nomCcu" class="java.lang.String"/>
+	<field name="tipPro" class="bean.Produto$TipoProduto"/>
+	<field name="setor" class="bean.RequisicaoEstoque$Setor"/>
+	<field name="idPro" class="bean.Produto$Id">
+		<fieldDescription><![CDATA[idPro]]></fieldDescription>
+	</field>
+	<field name="idPro.codPro" class="java.lang.String">
+		<fieldDescription><![CDATA[idPro.codPro]]></fieldDescription>
+	</field>
+	<field name="idPro.empresa" class="bean.Empresa">
+		<fieldDescription><![CDATA[idPro.empresa]]></fieldDescription>
+	</field>
+	<variable name="codUsu_1" class="java.lang.Integer" resetType="Group" resetGroup="usuario" calculation="Count">
+		<variableExpression><![CDATA[$F{codUsu}]]></variableExpression>
+	</variable>
+	<variable name="idCentro_1" class="java.lang.Integer" resetType="Group" resetGroup="centro" calculation="Count">
+		<variableExpression><![CDATA[$F{idCentro}]]></variableExpression>
+	</variable>
+	<group name="centro">
+		<groupExpression><![CDATA[$F{idCentro}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<textField>
+					<reportElement x="43" y="0" width="27" height="19" uuid="f27deb0b-d5e1-407b-8fa7-f77c7e455de5"/>
+					<textFieldExpression><![CDATA[$F{idCentro}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="20" uuid="096dd3f0-aa50-41d8-893f-da3e9cc017d1"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<text><![CDATA[Centro:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="70" y="0" width="178" height="19" uuid="8b92dc87-4515-469d-bb5d-e05f7f7d1be7"/>
+					<textFieldExpression><![CDATA[$F{nomCcu}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="20">
+				<textField>
+					<reportElement x="408" y="0" width="69" height="20" uuid="3367c5d5-ce77-449e-8c7a-21ba984b6721"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{idCentro_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="170" y="0" width="238" height="20" uuid="929ed383-e3d1-4059-b5eb-5ce50b7696a1"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Quantidade de itens do centro de custo:]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="usuario">
+		<groupExpression><![CDATA[$F{codUsu}]]></groupExpression>
+		<groupHeader>
+			<band height="39">
+				<textField>
+					<reportElement x="70" y="0" width="100" height="20" uuid="4001e4b4-2973-4661-ae9c-21a367f1b155"/>
+					<textFieldExpression><![CDATA[$F{codUsu}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="555" height="39" uuid="ce160693-a791-472e-9778-c94a5e2aea12"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<text><![CDATA[Solicitante:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="278" y="20" width="103" height="19" uuid="e83e548a-f57c-4523-9885-3ea5abe5d8f0"/>
+					<text><![CDATA[Qtd. Requisitada]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="20" width="100" height="19" uuid="0e8e5e0d-8dd0-44ab-9c15-e28001522abd"/>
+					<text><![CDATA[Material]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="408" y="19" width="89" height="19" uuid="678392bb-89f9-4849-8c8b-2593251d2db1"/>
+					<text><![CDATA[Qtd. Aprovada]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="19" width="555" height="1" uuid="a629e2fe-9903-48a6-9c16-374c6bbf2d14"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="20">
+				<textField>
+					<reportElement x="408" y="0" width="69" height="20" uuid="0e22d90d-65bc-4c9c-810b-9c384492321a"/>
+					<textElement textAlignment="Right"/>
+					<textFieldExpression><![CDATA[$V{codUsu_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="193" y="0" width="215" height="20" uuid="1caebd90-0925-42b9-ba0a-0fad1a900c0c"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Quantidade de itens do solicitante:]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="41" width="555" height="20" uuid="15c08af6-3d7d-4c85-8fb1-649c02eeb3c5"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Competência: " + $P{cmpReq}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="555" height="65" uuid="85d43f1e-9e5b-4c97-bb47-b94ccca7c53d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{tipoMaterial}.equals("MI")) ?
+ "Distribuição de Material de Instalação / Ferramentas"
+ : ($P{tipoMaterial}.equals("ME")) ?
+ "Distribuição de Material de Expediente" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="0" width="33" height="20" uuid="085a41ec-badf-4c01-b2c0-71286138e709"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField pattern="###0">
+				<reportElement x="278" y="0" width="82" height="20" uuid="2e52ead0-3d8e-4c08-9b28-2f09387c3cc1"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{qtdEme}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="408" y="0" width="69" height="20" uuid="526250a3-be11-492b-a40a-65cf5602377a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{qtdApr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="0" width="235" height="20" uuid="73229900-1224-4cfb-be5f-5a8085494389"/>
+				<textFieldExpression><![CDATA[$F{desPro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="0" width="41" height="20" uuid="a150060c-4e6b-445a-b7a4-f5afab425b7d"/>
+				<textFieldExpression><![CDATA[$F{idPro.codPro}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-3" x="433" y="2" width="122" height="14" uuid="9d89de6f-95c7-4c94-8b22-5af990ef0c2c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Verdana" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement key="rectangle-2" mode="Transparent" x="1" y="2" width="554" height="18" uuid="2fc3ebd5-6fc4-4a6c-b0ea-a34e3be8a347"/>
+			</rectangle>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

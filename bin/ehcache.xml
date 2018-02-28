@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd">
+	<diskStore path="java.io.tmpdir" />
+	<defaultCache maxElementsInMemory="10000" eternal="false"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true" />
+	<cache name="bean.Acesso" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Cidade" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Colaborador" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Usuario.centrosPermitidos"
+		diskExpiryThreadIntervalSeconds="0" diskPersistent="false" eternal="true"
+		maxElementsInMemory="5500" memoryStoreEvictionPolicy="LRU"
+		overflowToDisk="true" timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Solicitacao" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.ItemSolicitacao"
+		diskExpiryThreadIntervalSeconds="0" diskPersistent="false" eternal="true"
+		maxElementsInMemory="5500" memoryStoreEvictionPolicy="LRU"
+		overflowToDisk="true" timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Uniforme" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.GrauInstrucao" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Local" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Cargo" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Cliente" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.EscalaRonda" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Escala" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Afastamento" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Banco" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true">
+	</cache>
+	<cache name="bean.Centro" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Empresa" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	<cache name="bean.Hierarquia" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.Motivo" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.TipoEPI" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.Usuario" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.Estoque" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="15"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.AdiantamentoViagem"
+		diskExpiryThreadIntervalSeconds="0" diskPersistent="false" eternal="true"
+		maxElementsInMemory="5500" memoryStoreEvictionPolicy="LRU"
+		overflowToDisk="true" timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.Despesa" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.DespesaViagem" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.MotivoViagem" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+
+	<cache name="bean.Viagem" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	
+	<cache name="bean.Caracteristica" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	
+	<cache name="bean.Nacionalidade" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	
+	<cache name="bean.Produto" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	
+	<cache name="bean.Documento" diskExpiryThreadIntervalSeconds="0"
+		diskPersistent="false" eternal="true" maxElementsInMemory="5500"
+		memoryStoreEvictionPolicy="LRU" overflowToDisk="true"
+		timeToLiveSeconds="0">
+	</cache>
+	
+	<cache name="org.hibernate.cache.StandardQueryCache"
+		maxElementsInMemory="2000" eternal="false" timeToLiveSeconds="3600"
+		overflowToDisk="false" timeToIdleSeconds="1800" />
+	<cache name="org.hibernate.cache.UpdateTimestampsCache"
+		maxElementsInMemory="5000" eternal="true" overflowToDisk="false"
+		timeToIdleSeconds="0" timeToLiveSeconds="7200" />
+</ehcache>

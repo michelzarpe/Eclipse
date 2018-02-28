@@ -1,0 +1,34 @@
+{"items": [
+  {
+    "id": "5497",
+    "nomLoc": "LIMGER SISTEMAS DE SEGURANÇA LTDA"
+  },
+  {
+    "id": "6555",
+    "nomLoc": "LIMGER VIGILÂNCIA E MONITORAMENTO LTDA"
+  },
+  {
+    "id": "2826",
+    "nomLoc": "ONSEG SERVIÇO DE VIGILÂNCIA E SEGURANÇA LTDA"
+  },
+  {
+    "id": "5285",
+    "nomLoc": "ONSERVICE SERVIÇOS TERCEIRIZADOS LTDA"
+  },
+  {
+    "id": "5185",
+    "nomLoc": "QST QUALIDADE EM SERVIÇOS TEMPORÁRIOS LTDA"
+  },
+  {
+    "id": "4652",
+    "nomLoc": "QST QUALIDADE EM SERVIÇOS TERCEIRIZADOS LTDA"
+  },
+  {
+    "id": "5612",
+    "nomLoc": "Z&R TRANSPORTES E LOGÍSTICA LTDA"
+  },
+  {
+    "id": "6502",
+    "nomLoc": "ZANARDO SEGURANÇA ELETRÔNICA LTDA"
+  }
+], label:"nomLoc", identifier: "id", name: "nomLoc"}

@@ -1,0 +1,5 @@
+package util;
+
+public enum Acao {
+	INSERIR, EDITAR, EXCLUIR, PROCESSAR, INSERIRITEM, EDITARITEM;
+}

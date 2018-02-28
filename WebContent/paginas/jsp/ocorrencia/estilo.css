@@ -1,0 +1,51 @@
+@CHARSET "ISO-8859-1";
+#bnc form{
+	font-size: 10pt;
+}
+
+#bnc fieldset{
+	padding: 20px;
+	border: solid #CCCCCC 1px;
+	margin: 0 auto;
+	text-align: left;
+	width: 350px;
+}
+
+#bnc legend{
+	font-weight: bold;
+	color: #C03;
+	font-size: 11pt;
+	letter-spacing: 1px;
+}
+
+html>body #bnc legend{
+	margin-bottom: 10px;
+}
+
+#bnc .campo{
+	border-top: solid #333333 1px;
+	border-left: solid #333333 1px;
+	border-bottom: solid #CCCCCC 1px;
+	border-right: solid #CCCCCC 1px;
+	font-size: 13px;
+	margin-bottom: 10px;
+	color: #0E0659;
+}
+
+#bnc label{
+	display: block;
+	width: 80px;
+	float: left;
+	color: #000;
+	border-bottom: 1px solid #F1F1F1;
+}
+#output{
+	right: 1%;
+	color: #FFF;
+	background-color: #FF0000;
+	visibility: hidden;
+	position: absolute;
+	top: 1px;
+	padding: 2px;
+	font-weight: bold;
+}

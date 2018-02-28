@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.cache.use_query_cache">true</property>
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="cache.provider_class">net.sf.ehcache.hibernate.SingletonEhCacheProvider</property>
+
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.timeout">1800</property>
+		<property name="hibernate.c3p0.idle_test_period">60</property>
+		
+		<property name="hibernate.c3p0.max_statements">50</property>
+		
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">20</property>
+		
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/gzOper?autoReconnectForPools=true</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">123456</property>
+		
+
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<!-- <property name="current_session_context_class">thread</property> -->
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">false</property>
+
+		<!-- Update and create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- Mapeamento de classes -->
+		<mapping class="bean.Acesso" />
+		<mapping class="bean.Afastamento" />
+		<mapping class="bean.Cargo" />
+		<mapping class="bean.Centro" />
+		<mapping class="bean.Cliente" />
+		<mapping class="bean.Colaborador" />
+		<mapping class="bean.Empresa" />
+		<mapping class="bean.Escala" />
+		<mapping class="bean.EscalaRonda" />
+		<mapping class="bean.Hierarquia" />
+		<mapping class="bean.ItemSolicitacao" />
+		<mapping class="bean.Local" />
+		<mapping class="bean.Motivo" />
+		<mapping class="bean.Solicitacao" />
+		<mapping class="bean.TipoEPI" />
+		<mapping class="bean.Uniforme" />
+		<mapping class="bean.Usuario" />
+		<mapping class="bean.Banco" />
+		<mapping class="bean.Cidade" />
+		<mapping class="bean.GrauInstrucao" />
+		<mapping class="bean.Estoque" />
+		<mapping class="bean.MotivoViagem" />
+		<mapping class="bean.Viagem" />
+		<mapping class="bean.AdiantamentoViagem" />
+		<mapping class="bean.Despesa" />
+		<mapping class="bean.DespesaViagem" />
+		<mapping class="bean.Produto" />
+		<mapping class="bean.RequisicaoEstoque" />
+		<mapping class="bean.Caracteristica" />
+		<mapping class="bean.Documento" />
+		<mapping class="bean.Nacionalidade" />
+		
+		<!-- MICHEL ZARPELON  -->	
+        <mapping class="bean.ClasseEscalaRonda" />
+		<mapping class="bean.EscalaHorarioRondaMZ" />
+	    <mapping class="bean.SequenciaRegistro" />
+	    <mapping class="bean.HorarioEscalaRonda" />
+		<mapping class="bean.HorarioRonda" />
+		<mapping class="bean.TurmaHorarioRonda" />
+		<mapping class="bean.HistoricoContaCorrenteWS" />    
+        <mapping class="bean.Agencia" />    
+        <mapping class="bean.Sindicato" />     
+        <mapping class="bean.Deficiencia" />  
+        <mapping class="bean.PostoTrabalho" />   
+        <mapping class="bean.NaturezaDespesa"/>   
+        <mapping class="bean.Vinculo"/>   
+        <mapping class="bean.EscalaVT"/>
+        <mapping class="bean.Bairro"/>
+        <mapping class="bean.Dependente"/> 		
+		
+
+
+		<!-- 
+		<mapping class="bean.Fornecedor" /> 
+		<mapping class="bean.CondicaoPagamento" />
+		
+		<mapping class="bean.Ocorrencia" />
+		<mapping class="bean.Cobertura" />
+		<mapping class="bean.MotivoOcorrencia" />
+		<mapping class="bean.SubTipoMotivo" />
+		-->
+	</session-factory>
+</hibernate-configuration>

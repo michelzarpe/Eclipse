@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Protocolo" pageWidth="535" pageHeight="842" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="Label" isDefault="false" fontName="Verdana" fontSize="9" isBold="true"/>
+	<style name="Dado" isDefault="false" isBlankWhenNull="true" fontName="Verdana" fontSize="9" isBold="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nomCcu" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.solicitante.centro.nomCcu]]></fieldDescription>
+	</field>
+	<field name="idEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id.solicitacao.colaborador.empresa.id]]></fieldDescription>
+	</field>
+	<field name="nomEmp" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.colaborador.empresa.nomEmp]]></fieldDescription>
+	</field>
+	<field name="codFil" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id.solicitacao.solicitante.cliente.id.codFil]]></fieldDescription>
+	</field>
+	<field name="razSoc" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.colaborador.cliente.razSoc]]></fieldDescription>
+	</field>
+	<field name="datEnt" class="java.util.Date">
+		<fieldDescription><![CDATA[id.solicitacao.datEnt]]></fieldDescription>
+	</field>
+	<field name="qtdEnt" class="java.lang.Integer">
+		<fieldDescription><![CDATA[qtdEnt]]></fieldDescription>
+	</field>
+	<field name="idEpi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id.uniforme.id]]></fieldDescription>
+	</field>
+	<field name="desEpi" class="java.lang.String">
+		<fieldDescription><![CDATA[id.uniforme.desEpi]]></fieldDescription>
+	</field>
+	<field name="nomFuncionario" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.colaborador.nomFun]]></fieldDescription>
+	</field>
+	<field name="numCpf" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.colaborador.numCpf]]></fieldDescription>
+	</field>
+	<field name="titCar" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.colaborador.cargo.titCar]]></fieldDescription>
+	</field>
+	<field name="locPai" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.colaborador.locPai]]></fieldDescription>
+	</field>
+	<field name="idMot" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id.solicitacao.motivo.id]]></fieldDescription>
+	</field>
+	<field name="nomeSolicitante" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.solicitante.nomFun]]></fieldDescription>
+	</field>
+	<field name="nomeSupervisor" class="java.lang.String">
+		<fieldDescription><![CDATA[id.solicitacao.supervisor.nomFun]]></fieldDescription>
+	</field>
+	<field name="datEnv" class="java.util.Date">
+		<fieldDescription><![CDATA[datEnv]]></fieldDescription>
+	</field>
+	<field name="datPro" class="java.util.Date">
+		<fieldDescription><![CDATA[datPro]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id.solicitacao.id]]></fieldDescription>
+	</field>
+	<field name="obsDis" class="java.lang.String">
+		<fieldDescription><![CDATA[obsDis]]></fieldDescription>
+	</field>
+	<field name="motLib" class="java.lang.String">
+		<fieldDescription><![CDATA[motLib]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="19" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" mode="Opaque" x="0" y="0" width="535" height="19" backcolor="#EDECEC"/>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[DECLARAÇÃO DE RECEBIMENTO DE UNIFORMES E ACESSÓRIOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<rectangle>
+				<reportElement key="rectangle-3" mode="Transparent" x="0" y="68" width="535" height="16"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-2" mode="Transparent" x="0" y="52" width="535" height="16"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-8" x="66" y="52" width="76" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Verdana" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[UNIFORMES]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="0" y="0" width="535" height="52"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-9" style="Label" x="7" y="3" width="75" height="13"/>
+				<textElement textAlignment="Left">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Aprovado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-10" style="Label" x="7" y="15" width="75" height="13"/>
+				<textElement textAlignment="Left">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Empresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-11" style="Label" x="350" y="27" width="75" height="13"/>
+				<textElement textAlignment="Left">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Unidade:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-12" style="Label" x="7" y="27" width="75" height="13"/>
+				<textElement textAlignment="Left">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Solicitante:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-1" style="Dado" x="82" y="27" width="222" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nomeSolicitante}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-2" style="Dado" x="425" y="21" width="109" height="31"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nomCcu}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField-3" style="Dado" x="82" y="15" width="222" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idEmpresa} + " - " + $F{nomEmp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-14" style="Label" x="226" y="2" width="48" height="13"/>
+				<textElement textAlignment="Left">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField-5" style="Dado" x="273" y="2" width="67" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{datEnt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-15" style="Label" x="7" y="70" width="25" height="13"/>
+				<textElement/>
+				<text><![CDATA[Qtd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" style="Label" x="37" y="70" width="41" height="13"/>
+				<textElement/>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-17" style="Label" x="82" y="70" width="64" height="13"/>
+				<textElement/>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-25" style="Dado" x="82" y="3" width="136" height="13"/>
+				<textElement/>
+				<text><![CDATA[Gerência de Operações]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" style="Label" x="7" y="39" width="75" height="13"/>
+				<textElement textAlignment="Left">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Supervisor:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-11" style="Dado" x="82" y="39" width="222" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nomeSupervisor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-32" style="Label" x="340" y="8" width="121" height="13"/>
+				<textElement textAlignment="Left">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Código da solicitação:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="Dado" x="461" y="3" width="65" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="7" y="1" width="25" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(new SimpleDateFormat("dd/MM/yyyy").format($F{datPro}).equals(new SimpleDateFormat("dd/MM/yyyy").format(new Date())))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{qtdEnt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="0000" isBlankWhenNull="true">
+				<reportElement key="textField" x="37" y="1" width="40" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(new SimpleDateFormat("dd/MM/yyyy").format($F{datPro}).equals(new SimpleDateFormat("dd/MM/yyyy").format(new Date())))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{idEpi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="82" y="1" width="268" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(new SimpleDateFormat("dd/MM/yyyy").format($F{datPro}).equals(new SimpleDateFormat("dd/MM/yyyy").format(new Date())))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($F{motLib} == null) ?
+$F{desEpi} + "("+$F{obsDis}+")"
+: $F{desEpi} + "("+$F{obsDis}+")"+
+" / Motivo da liberação: " + $F{motLib}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-2" stretchType="RelativeToBandHeight" x="353" y="0" width="1" height="15"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-6" stretchType="RelativeToBandHeight" x="535" y="0" width="1" height="13"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-7" stretchType="RelativeToBandHeight" x="0" y="0" width="1" height="13"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" style="Dado" x="430" y="0" width="100" height="13">
+					<printWhenExpression><![CDATA[new Boolean(new SimpleDateFormat("dd/MM/yyyy").format($F{datPro}).equals(new SimpleDateFormat("dd/MM/yyyy").format(new Date())))]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{datEnv}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-31" style="Label" x="362" y="0" width="69" height="13">
+					<printWhenExpression><![CDATA[new Boolean(new SimpleDateFormat("dd/MM/yyyy").format($F{datPro}).equals(new SimpleDateFormat("dd/MM/yyyy").format(new Date())))]]></printWhenExpression>
+				</reportElement>
+				<textElement/>
+				<text><![CDATA[Enviado em:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="181" splitType="Stretch">
+			<rectangle>
+				<reportElement key="rectangle-4" mode="Transparent" x="0" y="0" width="535" height="179"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-19" x="7" y="3" width="519" height="35"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font fontName="Verdana" size="9"/>
+				</textElement>
+				<text><![CDATA[Eu abaixo assino, declaro que recebi as peças de uniforme acima relacionadas, as quais somente deverei usar no ato do trabalho, zelando e mantendo as mesmas em plenas condições de uso, pelo qual responsabilizo-me.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-20" style="Label" x="7" y="42" width="75" height="13"/>
+				<textElement/>
+				<text><![CDATA[Funcionário:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-6" style="Dado" x="81" y="42" width="214" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nomFuncionario}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-21" style="Label" x="304" y="42" width="31" height="13"/>
+				<textElement/>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-7" style="Dado" x="334" y="42" width="121" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{numCpf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-22" style="Label" x="7" y="54" width="75" height="13"/>
+				<textElement/>
+				<text><![CDATA[Função:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField-8" style="Dado" x="81" y="54" width="453" height="13"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{titCar}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-23" style="Label" x="7" y="66" width="75" height="13"/>
+				<textElement/>
+				<text><![CDATA[Local Posto:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-9" style="Dado" x="81" y="66" width="453" height="28"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{locPai}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-28" style="Label" x="407" y="114" width="93" height="11"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[IMPLANTAÇÃO]]></text>
+			</staticText>
+			<elementGroup>
+				<elementGroup>
+					<staticText>
+						<reportElement key="staticText-29" style="Label" x="407" y="147" width="93" height="11"/>
+						<textElement verticalAlignment="Middle">
+							<font pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<text><![CDATA[SUBSTITUIÇÃO]]></text>
+					</staticText>
+					<rectangle>
+						<reportElement key="rectangle-6" x="387" y="147" width="11" height="12" forecolor="#000000" backcolor="#000000">
+							<printWhenExpression><![CDATA[new Boolean($F{idMot}.intValue() == 1)]]></printWhenExpression>
+						</reportElement>
+					</rectangle>
+				</elementGroup>
+			</elementGroup>
+			<rectangle>
+				<reportElement key="rectangle-7" x="387" y="114" width="11" height="12" forecolor="#000000" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($F{idMot}.intValue() == 2)]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<line>
+				<reportElement key="line-4" x="0" y="95" width="535" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-5" x="0" y="40" width="535" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="line-8" x="26" y="154" width="162" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-12" style="Dado" x="26" y="158" width="161" height="13"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nomeSupervisor}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-9" x="26" y="125" width="162" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField-13" style="Dado" x="26" y="127" width="161" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nomFuncionario}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement key="line-10" x="206" y="125" width="162" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-33" style="Dado" x="204" y="127" width="164" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Responsável Almoxarifado]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

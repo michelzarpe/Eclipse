@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Auto-Completar com AJAX em Script.aculo.us</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="script/prototype.js"></script>
+<script type="text/javascript" src="script/scriptaculous.js"></script>
+<script type="text/javascript">
+	window.onload = function(){
+		new Ajax.Autocompleter('bancos',
+								'bancos_auto_completar',
+								'banco!buscar.action',
+								{
+									indicator:'opt',
+									tokens: [',', ';']
+								})
+	}
+	</script>
+<style>
+	div.auto_completar {
+		width: 350px;
+		background: #fff;
+	}
+	div.auto_completar ul {
+		border:1px solid #888;
+		margin:0;
+		padding:0;
+		width:100%;
+		list-style-type:none;
+	}
+	div.auto_completar ul li {
+		margin:0;
+		padding:3px;
+	}
+	div.auto_completar ul li.selected {
+		background-color: #ffb;
+	}
+
+</style>
+</head>
+<body>
+
+<form id="form1" method="post" action="">
+<input autocomplete="off" id="bancos" name="nomBan" size="30" type="text" value="" />
+<div class="auto_completar" id="bancos_auto_completar"></div>
+<span id="opt" style="display:none;right:1%;color:#FFF;background-color:#FF0000;position:absolute;top:1px;">Carregando...</span>
+</form>
+
+</body>
+</html>

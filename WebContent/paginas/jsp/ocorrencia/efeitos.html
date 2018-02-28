@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Core e Combination Effects</title>
+<style type="text/css">
+ .efeito {
+  cursor: pointer;
+ }
+ .exemplo{
+ 	background-color:#EEEEEE;
+ 	float: none;
+ 	width:120px;
+ 	height:120px;
+ 	padding: 2px;
+ }
+</style>
+	<script type="text/javascript" src="script/prototype.js"></script>
+	<script type="text/javascript" src="script/scriptaculous.js"></script>
+	<script type="text/javascript" src="script/script4.js"></script>
+</head>
+<body>
+
+
+<strong>Efeitos do Script.aculo.us</strong>
+<br /><br />
+<form name="efeitos">
+           <select name="efeito" onchange="demo(this)">
+            <option value="">Selecione o efeito desejado...</option>
+            <optgroup label="Core Effects">
+              <option value="Opacity">Opacity</option>
+              <option value="Highlight">Highlight</option>
+              <option value="Scale">Scale</option>
+              <option value="MoveBy">MoveBy</option>
+            </optgroup>
+            <optgroup label="Combination Effects">
+              <option value="Fade">Fade</option>
+              <option value="Appear">Appear</option>
+              <option value="BlindUp">BlindUp</option>
+              <option value="BlindDown">BlindDown</option>
+              <option value="SlideUp">SlideUp</option>
+              <option value="SlideDown">SlideDown</option>
+              <option value="Shrink">Shrink</option>
+              <option value="Grow">Grow</option>
+              <option value="Puff">Puff</option>
+              <option value="DropOut">DropOut</option>
+              <option value="SwitchOff">SwitchOff</option>
+              <option value="Squish">Squish</option>
+              <option value="Fold">Fold</option>
+              <option value="Shake">Shake</option>
+              <option value="Pulsate">Pulsate</option>
+            </optgroup>
+          </select>
+
+</form>
+<br />
+<br />
+
+      <div class="exemplo" id="demonstracao" style="">
+
+        <div style="height:120px;">
+          <span>Neste local você vê as mudanças que ocorrem sobre
+          cada efeito aplicado.</span>
+        </div>
+      </div>
+
+Dê reload no navegador para reiniciar os efeitos.
+
+
+</body>
+</html>

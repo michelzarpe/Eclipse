@@ -1,0 +1,168 @@
+@CHARSET "ISO-8859-1";
+
+.icnView {
+	background-image: url(images/lock_view.png) !important;
+}
+.icnInt {
+	background-image: url(images/cog_go.png) !important;
+}
+
+.icnAut {
+	background-image: url(images/autoriza16.png) !important;
+}
+
+.icnNeg {
+	background-image: url(images/lock.png) !important;
+}
+
+.icnExc {
+	background-image: url(images/i_delete.gif) !important;
+}
+
+.icnExp {
+	background-image: url(images/download.png) !important;
+}
+
+.icnHom {
+	background-image: url(images/home.png) !important;
+}
+
+.icnPes {
+	background-image: url(images/find.png) !important;
+}
+
+.icnAlt {
+	background-image: url(images/altSenha.png) !important;
+}
+
+.icnSai {
+	background-image: url(images/sair.png) !important;
+}
+
+.icnFic {
+	background-image: url(images/printer.png) !important;
+}
+
+.icnRel {
+	background-image: url(images/report.png) !important;
+}
+
+.icnCol {
+	background-image: url(images/user1_new.png) !important;
+}
+
+.icnUni {
+	background-image: url(images/camiseta.png) !important;
+}
+
+.icnPrt {
+	background-image: url(images/printer.png) !important;
+}
+
+.icnPrc {
+	background-image: url(images/processa.png) !important;
+}
+
+.icnAdm {
+	background-image: url(images/businessmen.png) !important;
+}
+
+.icnSolPen {
+	background-image: url(images/index.png) !important;
+}
+
+.icnAte {
+	background-image: url(images/atender.png) !important;
+}
+
+.icnEst {
+	background-image: url(images/estornar.png) !important;
+}
+
+.icnCom {
+	background-image: url(images/completaCadastro.png) !important;
+}
+
+.icnAdd {
+	background-image: url(images/add2.png) !important;
+}
+
+.icnGra {
+	background-image: url(images/gravar.png) !important;
+}
+
+.icnCan {
+	background-image: url(images/cancelar.png) !important;
+}
+
+.icnCmp {
+	background-image: url(images/Carrinho.png) !important;
+}
+
+.icnSin {
+	background-image: url(images/sincronizacao.png) !important;
+}
+
+.corLiberado {
+	font-style: italic;
+	color: 	#7F00FF;
+}
+
+.corBloqueado {
+	font-style: italic;
+	color: #FF0000;
+}
+
+.corIntegrado {
+	font-style: italic;
+	color: #0000FF;
+}
+
+.corHomologado {
+	font-style: italic;
+	color: #00CC00;
+}
+
+.corNaoAtendido {
+	font-style: italic;
+	color: #FFCC00;
+}
+
+.corAberto {
+	font-style: italic;
+	color: #FF9900;
+}
+
+.corFechado {
+	font-style: italic;
+	color: #003399;
+}
+
+.corDigitado {
+	font-style: italic;
+	color: #FF6633;
+}
+
+.corAprovado {
+	font-style: italic;
+	color: #333399;
+}
+
+.corCompras {
+	font-style: italic;
+	color: #9900FF;
+}
+
+.corAtendido {
+	font-style: italic;
+	color: #006600;
+}
+
+.corCancelado {
+	font-style: italic;
+	color: #006600;
+}
+
+fundoCinza{
+	background-color: gray;	
+}

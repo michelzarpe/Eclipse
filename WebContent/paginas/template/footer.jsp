@@ -1,0 +1,1 @@
+<div id=footer">&#169; 2008, Grupo Zanardo - Alessandra Scheuermann</div>

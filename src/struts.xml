@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- habilita o uso de outros métodos de action internamente na classe action -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.devMode" value="false" />
+	<include file="struts-default.xml" />
+	<package name="default" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="login" class="interceptor.AuthenticationInterceptor" />
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="login" />
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="loginStack"></default-interceptor-ref>
+		<global-results>
+			<result name="login">/paginas/jsp/login.jsp
+			</result>
+		</global-results>
+	</package>
+</struts>

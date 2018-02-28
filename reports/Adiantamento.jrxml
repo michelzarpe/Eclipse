@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="Adiantamento"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="567"
+		 pageHeight="842"
+		 columnWidth="567"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Label"
+		isDefault="false"
+		fontName="Tahoma"
+		fontSize="8"
+		isBold="true"
+		isBlankWhenNull="true"
+	>
+	</style>
+	<style 
+		name="Campo"
+		isDefault="false"
+		fontName="Tahoma"
+		fontSize="8"
+	>
+	</style>
+
+	<parameter name="DATA" isForPrompting="false" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA["C:\\Dev\\Weboper2.0\\reports\\"]]></defaultValueExpression>
+	</parameter>
+
+	<field name="vlrAdt" class="java.lang.Double">
+		<fieldDescription><![CDATA[vlrAdt]]></fieldDescription>
+	</field>
+	<field name="datAdt" class="java.util.Date">
+		<fieldDescription><![CDATA[datAdt]]></fieldDescription>
+	</field>
+	<field name="numCad" class="java.lang.Long">
+		<fieldDescription><![CDATA[id.viagem.colaborador.numCad]]></fieldDescription>
+	</field>
+	<field name="nomFun" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.colaborador.nomFun]]></fieldDescription>
+	</field>
+	<field name="idEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id.viagem.empresa.id]]></fieldDescription>
+	</field>
+	<field name="nomEmp" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.empresa.nomEmp]]></fieldDescription>
+	</field>
+	<field name="desMtv" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.motivo.desMtv]]></fieldDescription>
+	</field>
+	<field name="itnVgm" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.itnVgm]]></fieldDescription>
+	</field>
+	<field name="nomBan" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.colaborador.banco.nomBan]]></fieldDescription>
+	</field>
+	<field name="codAge" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.colaborador.codAge]]></fieldDescription>
+	</field>
+	<field name="conBan" class="java.lang.Long">
+		<fieldDescription><![CDATA[id.viagem.colaborador.conBan]]></fieldDescription>
+	</field>
+	<field name="digCon" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.colaborador.digCon]]></fieldDescription>
+	</field>
+	<field name="digAge" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.colaborador.digAge]]></fieldDescription>
+	</field>
+	<field name="solicitante" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.solicitante.nomFun]]></fieldDescription>
+	</field>
+	<field name="codUsu" class="java.lang.String">
+		<fieldDescription><![CDATA[usuario.codUsu]]></fieldDescription>
+	</field>
+	<field name="cplMtv" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.cplMtv]]></fieldDescription>
+	</field>
+	<field name="locPai" class="java.lang.String">
+		<fieldDescription><![CDATA[id.viagem.colaborador.locPai]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id.viagem.id]]></fieldDescription>
+	</field>
+	<field name="adiantamentoId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id.id]]></fieldDescription>
+	</field>
+	<field name="datSai" class="java.util.Date">
+		<fieldDescription><![CDATA[id.viagem.datSai]]></fieldDescription>
+	</field>
+	<field name="centrosVisitados" class="java.util.Set">
+		<fieldDescription><![CDATA[id.viagem.centrosVisitados]]></fieldDescription>
+	</field>
+	<field name="datAdt_1" class="java.util.Date">
+		<fieldDescription><![CDATA[datAdt]]></fieldDescription>
+	</field>
+
+
+		<group  name="centrosVisitados" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="18"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="0"
+						width="567"
+						height="18"
+						key="rectangle-8"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+</graphicElement>
+				</rectangle>
+				<subreport  isUsingCache="true">
+					<reportElement
+						style="Label"
+						x="0"
+						y="0"
+						width="567"
+						height="18"
+						key="subreport-1"
+						printWhenGroupChanges="centrosVisitados">
+							<printWhenExpression><![CDATA[new Boolean(true)]]></printWhenExpression>
+						</reportElement>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{centrosVisitados})]]></dataSourceExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "CentrosVisitados.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="67"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="0"
+						width="567"
+						height="67"
+						key="rectangle-5"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+</graphicElement>
+				</rectangle>
+				<line direction="TopDown">
+					<reportElement
+						x="15"
+						y="42"
+						width="232"
+						height="0"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="17"
+						y="44"
+						width="225"
+						height="10"
+						key="textField-1"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{solicitante}]]></textFieldExpression>
+				</textField>
+				<line direction="TopDown">
+					<reportElement
+						x="285"
+						y="66"
+						width="232"
+						height="0"
+						key="line-2"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="285"
+						y="44"
+						width="232"
+						height="10"
+						key="textField-2"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nomFun}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Campo"
+						x="17"
+						y="54"
+						width="225"
+						height="10"
+						key="staticText-12"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<text><![CDATA[Solicitante]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Campo"
+						x="285"
+						y="54"
+						width="232"
+						height="10"
+						key="staticText-13"/>
+					<box></box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<text><![CDATA[Colaborador]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						x="285"
+						y="42"
+						width="232"
+						height="0"
+						key="line-3"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+</graphicElement>
+				</line>
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="dadosBancarios" >
+			<groupExpression><![CDATA[]]></groupExpression>
+			<groupHeader>
+			<band height="64"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="0"
+						width="567"
+						height="64"
+						key="rectangle-7"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="49"
+						y="38"
+						width="64"
+						height="10"
+						key="staticText-7"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Valor:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="119"
+						y="38"
+						width="100"
+						height="10"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{vlrAdt}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="0"
+						y="2"
+						width="102"
+						height="13"
+						key="staticText-8"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold" isUnderline="true"/>
+					</textElement>
+				<text><![CDATA[Dados Bancários]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="49"
+						y="18"
+						width="64"
+						height="10"
+						key="staticText-9"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Banco:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="49"
+						y="28"
+						width="64"
+						height="10"
+						key="staticText-10"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Agência:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="185"
+						y="28"
+						width="34"
+						height="10"
+						key="staticText-11"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Conta:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="119"
+						y="18"
+						width="320"
+						height="10"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nomBan}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="119"
+						y="28"
+						width="61"
+						height="10"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{codAge} +"-"+ $F{digAge}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="219"
+						y="28"
+						width="197"
+						height="10"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[String.valueOf($F{conBan}) +"-"+ $F{digCon}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="49"
+						y="48"
+						width="64"
+						height="10"
+						key="staticText-19"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Vencimento:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="119"
+						y="48"
+						width="90"
+						height="10"
+						key="textField-4"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{datAdt}]]></textFieldExpression>
+				</textField>
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="42"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="0"
+						y="0"
+						width="567"
+						height="42"
+						key="staticText-1"/>
+					<box>					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold" size="14" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Solicitação de Adiantamento para Viagem]]></text>
+				</staticText>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="111"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						x="0"
+						y="0"
+						width="567"
+						height="111"
+						key="rectangle-6"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="5"
+						y="-1"
+						width="56"
+						height="13"
+						key="staticText-2"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Empresa:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="73"
+						y="-1"
+						width="335"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{nomEmp}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="5"
+						y="42"
+						width="56"
+						height="13"
+						key="staticText-3"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Data viagem:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="dd/MM/yyyy" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="73"
+						y="42"
+						width="90"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$F{datSai}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="5"
+						y="13"
+						width="56"
+						height="13"
+						key="staticText-4"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Colaborador:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="73"
+						y="13"
+						width="335"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{numCad} + "-" + $F{nomFun}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="5"
+						y="57"
+						width="56"
+						height="13"
+						key="staticText-5"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Motivo:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="5"
+						y="84"
+						width="56"
+						height="13"
+						key="staticText-6"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Itinerário:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="73"
+						y="57"
+						width="315"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{desMtv}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="73"
+						y="84"
+						width="462"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{itnVgm}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="73"
+						y="71"
+						width="462"
+						height="12"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cplMtv}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="5"
+						y="99"
+						width="380"
+						height="11"
+						key="staticText-15"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Ratear despesas entre os centros:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="73"
+						y="27"
+						width="456"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{locPai}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="5"
+						y="27"
+						width="56"
+						height="13"
+						key="staticText-16"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Local:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="427"
+						y="0"
+						width="54"
+						height="12"
+						key="staticText-17"/>
+					<box></box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Viagem:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="00000" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="481"
+						y="0"
+						width="49"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Label"
+						x="408"
+						y="13"
+						width="73"
+						height="13"
+						key="staticText-18"/>
+					<box></box>
+					<textElement textAlignment="Left">
+						<font pdfFontName="Helvetica-Bold"/>
+					</textElement>
+				<text><![CDATA[Adiantamento:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" pattern="00000" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="481"
+						y="13"
+						width="50"
+						height="13"
+						key="textField"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{adiantamentoId}]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="19"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="0"
+						width="567"
+						height="18"
+						key="rectangle-1"/>
+					<graphicElement stretchType="NoStretch">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+</graphicElement>
+				</rectangle>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="408"
+						y="2"
+						width="122"
+						height="14"
+						key="textField-3"/>
+					<box></box>
+					<textElement textAlignment="Right">
+						<font fontName="Verdana" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Campo"
+						x="43"
+						y="1"
+						width="100"
+						height="16"
+						key="textField"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Haettenschweiler" size="9"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{codUsu}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Campo"
+						x="0"
+						y="2"
+						width="43"
+						height="16"
+						key="staticText-14"/>
+					<box></box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Haettenschweiler" size="9"/>
+					</textElement>
+				<text><![CDATA[Usuário:]]></text>
+				</staticText>
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

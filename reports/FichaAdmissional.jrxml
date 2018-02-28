@@ -1,0 +1,1276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FichaAdmissional" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="51873d63-130b-4f1e-8c4d-4211e6f3d813">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<style name="Label" fontName="Times New Roman" fontSize="8" isBold="true" isItalic="false" pdfFontName="Times-Bold" isPdfEmbedded="false"/>
+	<style name="campo" hAlign="Left" markup="none" isBlankWhenNull="true" fontName="Times New Roman" fontSize="8" pdfFontName="Times-Roman"/>
+	<parameter name="LocalOrganograma" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[select * from Colaborador, Centro, Banco, Nacionalidade, Empresa
+where colaborador.centroId=centro.id and colaborador.bancoId=banco.id and colaborador.nacionalidadeId=nacionalidade.id and colaborador.empresaId=empresa.id]]>
+	</queryString>
+	<field name="nomeSexo" class="java.lang.String">
+		<fieldDescription><![CDATA[sexo.descricao]]></fieldDescription>
+	</field>
+	<field name="tipoSanguineo" class="java.lang.String">
+		<fieldDescription><![CDATA[tipSan.descricao]]></fieldDescription>
+	</field>
+	<field name="tipoSalario" class="java.lang.String">
+		<fieldDescription><![CDATA[tipSal.descricao]]></fieldDescription>
+	</field>
+	<field name="nomeSubstituido" class="java.lang.String">
+		<fieldDescription><![CDATA[colabSubs.nomFun]]></fieldDescription>
+	</field>
+	<field name="id_escalaSubs" class="java.lang.Integer">
+		<fieldDescription><![CDATA[colabSubs.escalaRonda.id]]></fieldDescription>
+	</field>
+	<field name="nomEsc_Subs" class="java.lang.String">
+		<fieldDescription><![CDATA[colabSubs.escalaRonda.nomEsc]]></fieldDescription>
+	</field>
+	<field name="cidadeNas" class="java.lang.String">
+		<fieldDescription><![CDATA[cciNas.nomCid]]></fieldDescription>
+	</field>
+	<field name="estadoNas" class="java.lang.String">
+		<fieldDescription><![CDATA[cciNas.estCid]]></fieldDescription>
+	</field>
+	<field name="id_empresaColaborador" class="java.lang.Integer">
+		<fieldDescription><![CDATA[empresa.id]]></fieldDescription>
+	</field>
+	<field name="racaCor" class="java.lang.String">
+		<fieldDescription><![CDATA[racCor.descricao]]></fieldDescription>
+	</field>
+	<field name="desGra" class="java.lang.String">
+		<fieldDescription><![CDATA[grauInstrucao.desGra]]></fieldDescription>
+	</field>
+	<field name="titCar" class="java.lang.String">
+		<fieldDescription><![CDATA[cargo.titCar]]></fieldDescription>
+	</field>
+	<field name="desMtv" class="java.lang.String">
+		<fieldDescription><![CDATA[motivo.desMtv]]></fieldDescription>
+	</field>
+	<field name="nomEsc" class="java.lang.String">
+		<fieldDescription><![CDATA[escalaRonda.nomEsc]]></fieldDescription>
+	</field>
+	<field name="id_EstCiv" class="java.lang.Integer">
+		<fieldDescription><![CDATA[estCiv.id]]></fieldDescription>
+	</field>
+	<field name="descricao" class="java.lang.String">
+		<fieldDescription><![CDATA[meiTrans.descricao]]></fieldDescription>
+	</field>
+	<field name="estadoEndereco" class="java.lang.String">
+		<fieldDescription><![CDATA[cidEnd.estCid.descricao]]></fieldDescription>
+	</field>
+	<field name="nomCid_1" class="java.lang.String">
+		<fieldDescription><![CDATA[cidEnd.nomCid]]></fieldDescription>
+	</field>
+	<field name="nomFun" class="java.lang.String">
+		<fieldDescription><![CDATA[nomFun]]></fieldDescription>
+	</field>
+	<field name="datNas" class="java.util.Date">
+		<fieldDescription><![CDATA[datNas]]></fieldDescription>
+	</field>
+	<field name="numCpf" class="java.lang.String">
+		<fieldDescription><![CDATA[numCpf]]></fieldDescription>
+	</field>
+	<field name="numCid" class="java.lang.String">
+		<fieldDescription><![CDATA[numCid]]></fieldDescription>
+	</field>
+	<field name="emiCid" class="java.lang.String">
+		<fieldDescription><![CDATA[emiCid]]></fieldDescription>
+	</field>
+	<field name="numCtp" class="java.lang.Long">
+		<fieldDescription><![CDATA[numCtp]]></fieldDescription>
+	</field>
+	<field name="serCtp" class="java.lang.String">
+		<fieldDescription><![CDATA[serCtp]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="nomCcu" class="java.lang.String">
+		<fieldDescription><![CDATA[centro.nomCcu]]></fieldDescription>
+	</field>
+	<field name="numPis" class="java.lang.Long">
+		<fieldDescription><![CDATA[numPis]]></fieldDescription>
+	</field>
+	<field name="numCnh" class="java.lang.String">
+		<fieldDescription><![CDATA[numCnh]]></fieldDescription>
+	</field>
+	<field name="catCnh" class="java.lang.String">
+		<fieldDescription><![CDATA[catCnh]]></fieldDescription>
+	</field>
+	<field name="conBan" class="java.lang.Long">
+		<fieldDescription><![CDATA[conBan]]></fieldDescription>
+	</field>
+	<field name="digCon" class="java.lang.String">
+		<fieldDescription><![CDATA[digCon]]></fieldDescription>
+	</field>
+	<field name="nomBan" class="java.lang.String">
+		<fieldDescription><![CDATA[banco.nomBan]]></fieldDescription>
+	</field>
+	<field name="numEle" class="java.lang.String">
+		<fieldDescription><![CDATA[numEle]]></fieldDescription>
+	</field>
+	<field name="zonEle" class="java.lang.String">
+		<fieldDescription><![CDATA[zonEle]]></fieldDescription>
+	</field>
+	<field name="secEle" class="java.lang.String">
+		<fieldDescription><![CDATA[secEle]]></fieldDescription>
+	</field>
+	<field name="numDep" class="java.lang.Integer">
+		<fieldDescription><![CDATA[numDep]]></fieldDescription>
+	</field>
+	<field name="endRua" class="java.lang.String">
+		<fieldDescription><![CDATA[endRua]]></fieldDescription>
+	</field>
+	<field name="endNum" class="java.lang.String">
+		<fieldDescription><![CDATA[endNum]]></fieldDescription>
+	</field>
+	<field name="endCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[endCpl]]></fieldDescription>
+	</field>
+	<field name="baiEnd" class="java.lang.String">
+		<fieldDescription><![CDATA[baiEnd]]></fieldDescription>
+	</field>
+	<field name="cep" class="java.lang.String">
+		<fieldDescription><![CDATA[cep]]></fieldDescription>
+	</field>
+	<field name="numDRT" class="java.lang.String">
+		<fieldDescription><![CDATA[numDRT]]></fieldDescription>
+	</field>
+	<field name="numDip" class="java.lang.String">
+		<fieldDescription><![CDATA[numDip]]></fieldDescription>
+	</field>
+	<field name="datFor" class="java.util.Date">
+		<fieldDescription><![CDATA[datFor]]></fieldDescription>
+	</field>
+	<field name="datRec" class="java.util.Date">
+		<fieldDescription><![CDATA[datRec]]></fieldDescription>
+	</field>
+	<field name="datAdm" class="java.util.Date">
+		<fieldDescription><![CDATA[datAdm]]></fieldDescription>
+	</field>
+	<field name="horIni" class="java.lang.String">
+		<fieldDescription><![CDATA[horIni]]></fieldDescription>
+	</field>
+	<field name="horFin" class="java.lang.String">
+		<fieldDescription><![CDATA[horFin]]></fieldDescription>
+	</field>
+	<field name="horIni2" class="java.lang.String">
+		<fieldDescription><![CDATA[horIni2]]></fieldDescription>
+	</field>
+	<field name="horFin2" class="java.lang.String">
+		<fieldDescription><![CDATA[horFin2]]></fieldDescription>
+	</field>
+	<field name="numTel" class="java.lang.String">
+		<fieldDescription><![CDATA[numTel]]></fieldDescription>
+	</field>
+	<field name="nomCon" class="java.lang.String">
+		<fieldDescription><![CDATA[nomCon]]></fieldDescription>
+	</field>
+	<field name="fonCon" class="java.lang.String">
+		<fieldDescription><![CDATA[fonCon]]></fieldDescription>
+	</field>
+	<field name="numCel" class="java.lang.String">
+		<fieldDescription><![CDATA[numCel]]></fieldDescription>
+	</field>
+	<field name="obs" class="java.lang.String">
+		<fieldDescription><![CDATA[obs]]></fieldDescription>
+	</field>
+	<field name="locPai" class="java.lang.String">
+		<fieldDescription><![CDATA[locPai]]></fieldDescription>
+	</field>
+	<field name="codAge" class="java.lang.String">
+		<fieldDescription><![CDATA[codAge]]></fieldDescription>
+	</field>
+	<field name="digAge" class="java.lang.String">
+		<fieldDescription><![CDATA[digAge]]></fieldDescription>
+	</field>
+	<field name="numCad" class="java.lang.Long">
+		<fieldDescription><![CDATA[numCad]]></fieldDescription>
+	</field>
+	<field name="orgDip" class="java.lang.String">
+		<fieldDescription><![CDATA[orgDip]]></fieldDescription>
+	</field>
+	<field name="valSal" class="java.lang.Float">
+		<fieldDescription><![CDATA[valSal]]></fieldDescription>
+	</field>
+	<field name="horIniSab" class="java.lang.String">
+		<fieldDescription><![CDATA[horIniSab]]></fieldDescription>
+	</field>
+	<field name="horFinSab" class="java.lang.String">
+		<fieldDescription><![CDATA[horFinSab]]></fieldDescription>
+	</field>
+	<field name="horIniSab2" class="java.lang.String">
+		<fieldDescription><![CDATA[horIniSab2]]></fieldDescription>
+	</field>
+	<field name="horFinSab2" class="java.lang.String">
+		<fieldDescription><![CDATA[horFinSab2]]></fieldDescription>
+	</field>
+	<field name="vctCNV" class="java.util.Date">
+		<fieldDescription><![CDATA[vctCNV]]></fieldDescription>
+	</field>
+	<field name="extSegPes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[extSegPes]]></fieldDescription>
+	</field>
+	<field name="temCNV" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[temCNV]]></fieldDescription>
+	</field>
+	<field name="dexCid" class="java.util.Date">
+		<fieldDescription><![CDATA[dexCid]]></fieldDescription>
+	</field>
+	<field name="nomCur" class="java.lang.String">
+		<fieldDescription><![CDATA[nomCur]]></fieldDescription>
+	</field>
+	<field name="nomIns" class="java.lang.String">
+		<fieldDescription><![CDATA[nomIns]]></fieldDescription>
+	</field>
+	<field name="datCon" class="java.util.Date">
+		<fieldDescription><![CDATA[datCon]]></fieldDescription>
+	</field>
+	<field name="vlrAdi" class="java.lang.Float">
+		<fieldDescription><![CDATA[vlrAdi]]></fieldDescription>
+	</field>
+	<field name="nomPai" class="java.lang.String">
+		<fieldDescription><![CDATA[nomPai]]></fieldDescription>
+	</field>
+	<field name="nomMae" class="java.lang.String">
+		<fieldDescription><![CDATA[nomMae]]></fieldDescription>
+	</field>
+	<field name="qvtMes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[qvtMes]]></fieldDescription>
+	</field>
+	<field name="extTnsVal" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[extTnsVal]]></fieldDescription>
+	</field>
+	<field name="vvtMes" class="java.lang.Float">
+		<fieldDescription><![CDATA[vvtMes]]></fieldDescription>
+	</field>
+	<field name="pagSin" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[pagSin]]></fieldDescription>
+	</field>
+	<field name="horDia" class="java.lang.String">
+		<fieldDescription><![CDATA[horDia]]></fieldDescription>
+	</field>
+	<field name="horSem" class="java.lang.String">
+		<fieldDescription><![CDATA[horSem]]></fieldDescription>
+	</field>
+	<field name="horMes" class="java.lang.String">
+		<fieldDescription><![CDATA[horMes]]></fieldDescription>
+	</field>
+	<field name="numRes" class="java.lang.String">
+		<fieldDescription><![CDATA[numRes]]></fieldDescription>
+	</field>
+	<field name="nomEmp" class="java.lang.String">
+		<fieldDescription><![CDATA[empresa.nomEmp]]></fieldDescription>
+	</field>
+	<field name="desNac" class="java.lang.String">
+		<fieldDescription><![CDATA[nacionalidade.desNac]]></fieldDescription>
+	</field>
+	<variable name="estadoCivil" class="java.lang.String">
+		<variableExpression><![CDATA[bean.Colaborador.EstadoCivil.loadById($F{id_EstCiv}).name()]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-1" x="0" y="10" width="535" height="18" uuid="541056da-4918-4558-b210-7577e88362b8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="14" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[FICHA ADMISSIONAL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement key="rectangle-2" mode="Transparent" x="0" y="0" width="535" height="36" uuid="09e2c2c0-9d01-4d84-9917-4893f90d290e"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="730" splitType="Stretch">
+			<rectangle>
+				<reportElement key="rectangle-7" mode="Transparent" x="0" y="533" width="535" height="61" uuid="1ca987de-80e9-412c-82e7-2a28565dc8f9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="597" width="535" height="47" uuid="e569ef13-5b33-43e9-92c7-0b5aa753d91b"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-6" x="0" y="233" width="535" height="66" uuid="19fcd733-8710-444a-9d90-7da81f28f5d7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-1" mode="Transparent" x="0" y="0" width="535" height="33" uuid="49ec3246-d94b-4f29-ae4d-389521347173"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-4" mode="Opaque" x="0" y="37" width="535" height="14" backcolor="#ECEBEB" uuid="f41bdbe5-d04c-40fa-84a3-3393ee34dcc3"/>
+				<box leftPadding="6">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[DADOS PESSOAIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-5" style="Label" x="5" y="57" width="35" height="14" uuid="a2800b37-975e-4396-ae8c-1474f042c3b9"/>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-6" style="Label" x="5" y="72" width="107" height="14" uuid="f49d727e-867d-48c5-8514-0b9c9db09d43"/>
+				<text><![CDATA[Data de nascimento:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="30" y="57" width="287" height="14" uuid="67a27d5b-f7e3-4b95-ae81-6ae002704f61"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{nomFun}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="78" y="72" width="57" height="14" uuid="dc6ff84c-7493-440b-82b8-9287f6385076"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{datNas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-7" style="Label" x="428" y="57" width="32" height="14" uuid="4611199d-d491-43e0-aad5-003c333c5d20"/>
+				<text><![CDATA[Sexo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-9" style="Label" x="5" y="102" width="35" height="14" uuid="311f19d4-8448-45aa-81db-1a2f86463cec"/>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="30" y="102" width="74" height="14" uuid="52ad6a8a-3e7b-43b9-8263-aca6c07f0eaf"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{numCpf}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-10" style="Label" x="107" y="102" width="23" height="14" uuid="bf7caa9f-60c4-4c07-8fc8-9315494f1f22"/>
+				<text><![CDATA[RG:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="122" y="102" width="68" height="14" uuid="f51dc007-13af-4504-8f23-f4d638eec1f6"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{numCid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-11" style="Label" x="191" y="102" width="84" height="14" uuid="e572c019-596c-4e4f-bdcf-13699270f87a"/>
+				<text><![CDATA[Órgão Emissor:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="247" y="102" width="45" height="14" uuid="7a7cc4d0-e1a0-495f-bec5-5dc9eb01aa25"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{emiCid}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-12" style="Label" x="5" y="117" width="35" height="14" uuid="9e314d67-b335-47d3-aecd-dd18780b16b2"/>
+				<text><![CDATA[CTPS:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="30" y="117" width="74" height="14" uuid="1957418d-ed2d-4a9f-8fe1-9c07fc0d5785"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{numCtp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-13" style="Label" x="108" y="117" width="35" height="14" uuid="9204c14e-21c4-4f41-8adb-28876a4470e3"/>
+				<text><![CDATA[Série:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="131" y="117" width="60" height="14" uuid="327f20ab-d34a-4a84-8e87-1bdb3469465d"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{serCtp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="174" y="15" width="200" height="14" uuid="e4768a50-0493-466d-8589-83328c6395c3"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Unidade: </style>"
++ $F{id} + " - " + $F{nomCcu}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-14" style="Label" x="5" y="132" width="35" height="14" uuid="4a5e705e-9ce0-4dce-8e85-e7afb98a4261"/>
+				<text><![CDATA[PIS:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="29" y="132" width="75" height="14" uuid="819c4537-524f-4271-83a0-cc31b16d3e15"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{numPis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-15" style="Label" x="220" y="132" width="35" height="14" uuid="774e5d43-56d5-4121-8594-20e1faf7b25f"/>
+				<text><![CDATA[CNH:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="243" y="132" width="75" height="14" uuid="f3f2ffee-c7c0-4a05-b188-c804dd0dbfe9"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{numCnh}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-16" style="Label" x="320" y="132" width="90" height="14" uuid="8df11a6a-a0da-4054-b318-93946fc6d29d"/>
+				<text><![CDATA[Categoria CNH:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="381" y="132" width="51" height="14" uuid="c730cdf5-1404-4608-bd92-8548aeedfa01"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{catCnh}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-17" style="Label" x="5" y="148" width="82" height="14" uuid="f002c812-9778-45bb-963d-b1d888c1e2d7"/>
+				<text><![CDATA[Conta Corrente:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="65" y="148" width="53" height="14" uuid="c568f8b0-8fe6-4ef4-92f9-09af08dc103e"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{conBan} + "-"+$F{digCon}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-18" style="Label" x="119" y="148" width="40" height="14" uuid="95659503-238f-490a-9600-f60ee55237f5"/>
+				<text><![CDATA[Banco:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="144" y="148" width="100" height="14" uuid="eb5fc1f0-6a16-41b5-973c-e896d029dbc4"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{nomBan}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-19" style="Label" x="246" y="148" width="47" height="14" uuid="0f92e788-1fe8-4c6e-8389-6b58a7d6a77f"/>
+				<text><![CDATA[Agência:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="6" y="163" width="289" height="14" uuid="f5f2430f-7a2b-407e-a6ef-a462eb67f3b3"/>
+				<textElement textAlignment="Left" markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Título de Eleitor (Nº/Zona /Seção): </style>" +
+$F{numEle} + " / " + $F{zonEle} + " / " + $F{secEle}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-22" style="Label" x="137" y="72" width="75" height="14" uuid="93145dca-6330-4f2f-b2f9-cd7f8d8eb69a"/>
+				<text><![CDATA[Naturalidade:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="187" y="72" width="223" height="14" uuid="3ef9c1cf-7c08-442c-b481-e2b3986cf934"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[($F{cidadeNas} + "-" +$F{estadoNas}).toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="124" y="178" width="179" height="14" uuid="7744be5b-2a59-4192-89b0-325750c2208d"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Número de dependentes até 14 anos: </style>" +
+$F{numDep}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="6" y="193" width="159" height="14" uuid="634242f4-d6d2-4b92-aed4-da62cc7c8949"/>
+				<textElement markup="styled">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Grau de instrução: </style>" +
+$F{desGra}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-27" mode="Opaque" x="0" y="219" width="535" height="14" backcolor="#ECEBEB" uuid="d28ce263-938d-42e3-ae68-4b04f2bd685a"/>
+				<box leftPadding="6">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[DADOS DE ENDEREÇO E CONTATO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-28" style="Label" x="5" y="240" width="29" height="14" uuid="8b09c9da-a6f1-432f-8a5a-0674b156ac04"/>
+				<text><![CDATA[Rua:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-29" style="Label" x="261" y="240" width="38" height="14" uuid="4b52e9c6-8c91-426a-91c3-ee761ccb6ca6"/>
+				<text><![CDATA[Bairro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-30" style="Label" x="5" y="255" width="42" height="14" uuid="a5fa8f9a-bc3a-44ee-b0bb-d2936b9dd3bf"/>
+				<text><![CDATA[Cidade:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="24" y="240" width="222" height="14" uuid="91b7f082-e6e2-4cfc-aca8-0fefbd7d9b9b"/>
+				<textFieldExpression><![CDATA[$F{endRua}.toUpperCase() + ", " + $F{endNum} + " - " + $F{endCpl}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="288" y="240" width="232" height="14" uuid="c2d072a8-643d-4564-b616-602f9426a3e6"/>
+				<textFieldExpression><![CDATA[$F{baiEnd}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="34" y="255" width="356" height="14" uuid="f3da4466-6e66-425b-aa1b-155d4dac430c"/>
+				<textFieldExpression><![CDATA[$F{nomCid_1}.toUpperCase() + " - " + $F{estadoEndereco}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="99999-999" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="396" y="255" width="130" height="14" uuid="ccd68dd7-5c37-4fd3-95a1-bcc62e0d6be5"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>CEP: </style>" +
+$F{cep}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-33" mode="Opaque" x="0" y="519" width="535" height="14" backcolor="#ECEBEB" uuid="6ce0944e-0e25-4769-b1d1-361a586ed558"/>
+				<box leftPadding="6">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Verdana" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[PARA VIGILANTES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-34" style="Label" x="5" y="538" width="48" height="14" uuid="4049c574-c4fc-42c5-922d-6305791074c3"/>
+				<text><![CDATA[DRT nº:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-38" mode="Opaque" x="0" y="303" width="535" height="14" backcolor="#ECEBEB" uuid="a8fb7f0d-0ff7-46bc-a20f-e6a5380ec65a"/>
+				<box leftPadding="6">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[DADOS DA ADMISSÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-39" style="Label" x="5" y="322" width="99" height="14" uuid="19b4891f-ca61-413f-a7ea-bfe124d61ebc"/>
+				<text><![CDATA[Data da admissão:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-41" style="Label" x="5" y="361" width="27" height="14" uuid="ab34b068-049b-4aa2-8a4b-c7fc242934de"/>
+				<text><![CDATA[Local:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-44" style="Label" x="5" y="390" width="42" height="14" uuid="efaa1665-c0b6-4ac5-a9f0-804ffa8e809c"/>
+				<text><![CDATA[Motivo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-45" style="Label" x="5" y="406" width="93" height="14" uuid="47eefeb3-a4bf-438d-bc01-5d4246d51b77"/>
+				<text><![CDATA[Tipo de Contrato:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="35" y="538" width="100" height="14" uuid="32fa4f11-f301-4198-9093-7b74e7204025"/>
+				<textFieldExpression><![CDATA[$F{numDRT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="6" y="552" width="283" height="14" uuid="69f61738-6e43-4a55-852a-98e4dcf730a7"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Certificado de formação: </style>" +
+$F{numDip}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="138" y="566" width="108" height="14" uuid="dcb94cbe-d878-474e-bebf-08b11d063fe0">
+					<printWhenExpression><![CDATA[!new SimpleDateFormat("dd/MM/yyyy").format($F{datFor}).equals("31/12/1900")]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{datFor})]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="6" y="580" width="283" height="14" uuid="38558555-5f91-493c-9554-46c5ea7bf06b"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Data da última reciclagem: </style>" +
+new SimpleDateFormat("dd/MM/yyyy").format($F{datRec})]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="70" y="322" width="54" height="14" uuid="40b41f75-7964-4cb5-b73f-de6137007e09"/>
+				<textFieldExpression><![CDATA[$F{datAdm}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="6" y="342" width="200" height="14" uuid="94af2ad2-a5a9-4cd6-9a37-2d1ca84d02e7"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Cargo: </style>" +
+$F{titCar}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="33" y="390" width="100" height="14" uuid="401fcbe2-5b16-4f18-96b1-f0ad9c3c11a9"/>
+				<textFieldExpression><![CDATA[$F{desMtv}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="436" y="322" width="40" height="14" uuid="a5460704-64df-40db-89a8-6b938f251f12"/>
+				<textFieldExpression><![CDATA[$F{horIni}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="491" y="322" width="40" height="14" uuid="aadc7eaf-9baa-445f-980a-4adce1007a84"/>
+				<textFieldExpression><![CDATA[$F{horFin}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="436" y="338" width="40" height="14" uuid="c065b33c-f74e-43c7-a08a-c51bdee8e107"/>
+				<textFieldExpression><![CDATA[$F{horIni2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="492" y="338" width="40" height="14" uuid="dd82e6de-e2ed-439e-85a6-cd48a9af19f8"/>
+				<textFieldExpression><![CDATA[$F{horFin2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-46" style="Label" x="476" y="322" width="16" height="14" uuid="2bf0acb0-1199-460b-a4bb-08254e21a524"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[às]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-47" style="Label" x="476" y="338" width="16" height="14" uuid="6f53b0d2-27f3-4d56-be54-370b18abc4ae"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[às]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-1" x="46" y="687" width="102" height="1" uuid="87ac7ed8-56c8-4efc-b335-f6ba1d202a60"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-48" style="Label" x="35" y="689" width="124" height="14" uuid="bb000f5b-a081-461c-9974-f073a0c74d64"/>
+				<textElement textAlignment="Center">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Coordenador / Supervisor]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-2" x="173" y="687" width="102" height="1" uuid="d242400e-c1c6-42be-ad62-6bbb7f17e3c0"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-49" style="Label" x="165" y="689" width="113" height="14" uuid="fee0f499-c094-4f2b-ab6f-e78c1f850c42"/>
+				<textElement textAlignment="Center">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Gerente Área / Unidade]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-3" x="303" y="687" width="102" height="1" uuid="374a9de4-6c40-45b9-a6cd-f8c2cc81ff42"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-50" style="Label" x="303" y="689" width="102" height="14" uuid="33a1edcf-e831-4426-b3c9-21d5585e2430"/>
+				<textElement textAlignment="Center">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[ Setor de Pessoal]]></text>
+			</staticText>
+			<line>
+				<reportElement key="line-4" x="430" y="687" width="102" height="1" uuid="7b05f505-3f8f-4846-aa07-fe03d70cef50"/>
+			</line>
+			<staticText>
+				<reportElement key="staticText-51" style="Label" x="430" y="689" width="104" height="14" uuid="684ed1f5-5b4d-4464-bee9-149433c33f94"/>
+				<textElement textAlignment="Center">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Diretoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-58" style="Label" x="248" y="269" width="103" height="14" uuid="914b70eb-afac-4f7a-af51-13c855c8d5c8"/>
+				<text><![CDATA[Nome para contato:]]></text>
+			</staticText>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="6" y="270" width="238" height="14" uuid="a63d83a5-7c61-4446-8067-927a17a9b0f8"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Telefone: </style>" +
+$F{numTel}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="317" y="268" width="100" height="14" uuid="7892af8d-630e-4c9a-8f7d-b47ba102a302"/>
+				<textFieldExpression><![CDATA[$F{nomCon}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField-1" style="campo" x="6" y="15" width="163" height="14" uuid="eeaccddd-ff86-4d0e-84d9-7ef5185a9232"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Data de emissão: </style>"
++ new SimpleDateFormat("dd/MM/yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="449" y="57" width="57" height="14" uuid="9de42fbf-ce35-4033-b1de-7024f0af8c44"/>
+				<textFieldExpression><![CDATA[$F{nomeSexo}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="317" y="57" width="111" height="14" uuid="cf76e780-7e4f-426e-8071-16cad7df4baf"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Tipo sanguíneo: </style>"
++ $F{tipoSanguineo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="69" y="406" width="100" height="14" uuid="db527d64-b3ec-4740-9059-c49baca9b383"/>
+				<textFieldExpression><![CDATA[$F{tipoSalario}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="6" y="178" width="118" height="14" uuid="1f99f184-a455-4544-97b8-93c472448416"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Estado Civil: </style>" +
+"("+ $F{id_EstCiv} + ")" + $V{estadoCivil}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-60" style="Label" x="5" y="285" width="36" height="14" uuid="92e69c89-ebbc-4312-911c-1e81afb5146e"/>
+				<text><![CDATA[Celular:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-61" style="Label" x="174" y="284" width="153" height="14" uuid="b291500f-566d-416c-a28a-bd0b7a21731e"/>
+				<text><![CDATA[Outro telefone para contato:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="274" y="284" width="100" height="14" uuid="be80ccd2-f47b-46d6-8514-6a74e3590b8c"/>
+				<textFieldExpression><![CDATA[$F{fonCon}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="41" y="285" width="100" height="14" uuid="04a5b73e-236a-44c9-b7e7-6c373965ce83"/>
+				<textFieldExpression><![CDATA[$F{numCel}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-62" mode="Opaque" x="0" y="597" width="535" height="14" backcolor="#ECEBEB" uuid="eb807e21-f4b5-4e07-bc41-545910528b60"/>
+				<box leftPadding="6">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="Verdana" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[OBSERVAÇÕES]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="6" y="615" width="525" height="18" uuid="83bf3d2a-404f-4074-b46a-27a3954d3b57"/>
+				<textElement>
+					<font isItalic="true" pdfFontName="Helvetica-Oblique"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{obs}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="32" y="359" width="314" height="28" uuid="126affd9-4934-4733-be4e-ba48cf78d52c"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{locPai} + " - " + $P{LocalOrganograma}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="278" y="148" width="63" height="14" uuid="0b293879-89cc-4668-a0af-a0d6a59145a8"/>
+				<textFieldExpression><![CDATA[$F{codAge} + "-" + $F{digAge}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="141" y="390" width="390" height="14" uuid="fbc8b27a-5cc9-4eb3-9788-db137272364e"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Substituindo colaborador: </style>" +
+"("+$F{numCad}+") " + $F{nomeSubstituido}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="130" y="322" width="80" height="14" uuid="d0f09ffd-42fe-4ec7-ab5d-a7801b328c0a"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Escala: </style>" +
+$F{nomEsc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-64" style="Label" x="137" y="538" width="85" height="14" uuid="81937ffb-332b-4daa-a48f-66c74e077fac"/>
+				<text><![CDATA[Órgão Emissor:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="195" y="538" width="100" height="14" uuid="cf5c3097-885e-4b06-a9da-5b1072179745"/>
+				<textFieldExpression><![CDATA[$F{orgDip}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-65" style="Label" x="5" y="421" width="112" height="14" uuid="3d57990e-24b9-4fef-ab93-40c9087a4f6c"/>
+				<text><![CDATA[Escala do Substituído:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="85" y="421" width="34" height="14" uuid="70eb2274-eaa9-4e3d-a648-d160aa7b4c5d"/>
+				<textFieldExpression><![CDATA[$F{id_escalaSubs}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="117" y="421" width="334" height="14" uuid="5432ccf5-d920-499b-b317-b3e2795e4d6a"/>
+				<textFieldExpression><![CDATA[$F{nomEsc_Subs}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-66" style="Label" x="308" y="178" width="75" height="14" uuid="67688897-80ae-415c-be51-a99a4f5aec27"/>
+				<text><![CDATA[Salário Inicial:]]></text>
+			</staticText>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="362" y="178" width="43" height="14" uuid="9075b372-1f9d-4397-ac0c-a2abfbb06033"/>
+				<textFieldExpression><![CDATA[$F{valSal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-67" style="Label" x="356" y="354" width="79" height="30" uuid="a99c524e-46ec-424f-9011-0f2a9eb6d939"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Sábados/Domingos:]]></text>
+			</staticText>
+			<textField pattern="HH:mm" isBlankWhenNull="true">
+				<reportElement key="textField-2" style="campo" x="436" y="355" width="40" height="14" uuid="13bb22a3-2965-4f33-a2ef-b1256304b64a"/>
+				<textFieldExpression><![CDATA[$F{horIniSab}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-68" style="Label" x="476" y="355" width="15" height="14" uuid="30c45ba2-6014-4804-8168-d32cb4da7cce"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[às]]></text>
+			</staticText>
+			<textField pattern="HH:mm" isBlankWhenNull="true">
+				<reportElement key="textField-4" style="campo" x="492" y="354" width="40" height="14" uuid="f25faf78-e008-4509-9997-7087fc9c5669"/>
+				<textFieldExpression><![CDATA[$F{horFinSab}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-69" style="Label" x="476" y="370" width="15" height="14" uuid="5c4f1e98-d224-4929-9422-a2850d421ed9"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[às]]></text>
+			</staticText>
+			<textField pattern="HH:mm" isBlankWhenNull="true">
+				<reportElement key="textField-5" style="campo" x="436" y="370" width="40" height="14" uuid="df4f7da0-2d98-4e74-8e44-2c3a3abb5455"/>
+				<textFieldExpression><![CDATA[$F{horIniSab2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm" isBlankWhenNull="true">
+				<reportElement key="textField-6" style="campo" x="492" y="370" width="40" height="14" uuid="2569ac26-3846-4dd2-a76f-0fb7380be9fc"/>
+				<textFieldExpression><![CDATA[$F{horFinSab2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-70" style="Label" x="317" y="571" width="175" height="14" uuid="4a9acf68-ea26-4b17-be4f-bb0e79def2a8"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Carteira Nacional de Vigilante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-71" style="Label" x="317" y="538" width="214" height="14" uuid="edf606b0-68e5-443b-9551-417394d812c1"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Extensão em Segurança Pessoal Privada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-72" style="Label" x="317" y="554" width="214" height="14" uuid="79ad74dd-8fd8-485e-a60c-eff5a74e5280"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Extensão Transporte de Valores]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="466" y="571" width="59" height="14" uuid="768b6d7d-9d51-45d1-80e2-8bdd650ddca1"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{vctCNV}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-73" style="Label" x="442" y="571" width="39" height="14" uuid="90011d2f-b5c4-45cf-bb89-74d2afa11449"/>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Vcto.:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement key="rectangle-13" x="296" y="538" width="17" height="14" uuid="f1f5b112-8c84-4c13-8645-6d5e0c481b8e"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-74" x="296" y="538" width="17" height="14" uuid="142e928c-41e7-4ce6-966a-777582fdcb53">
+					<printWhenExpression><![CDATA[$F{extSegPes}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement key="rectangle-14" x="296" y="554" width="17" height="14" uuid="419c0b1a-a58c-4310-9beb-cc5c85435969"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement key="rectangle-15" x="296" y="571" width="17" height="14" uuid="e19330db-dbe0-4f32-ba4e-76734e4d0849"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-75" x="296" y="570" width="17" height="14" uuid="c9fac060-5270-47e2-8f32-df9b00759488">
+					<printWhenExpression><![CDATA[$F{temCNV}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-76" x="295" y="554" width="17" height="14" uuid="0b2ced1c-145b-45e9-9f01-826e4e54b1f0">
+					<printWhenExpression><![CDATA[$F{extTnsVal}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="campo" x="300" y="102" width="231" height="14" uuid="0d68cc40-5a7e-4e3d-9178-8663ad010702"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Data de emissão: </style>" +
+new SimpleDateFormat("dd/MM/yyyy").format($F{dexCid})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="campo" x="261" y="193" width="274" height="14" uuid="a8b3282e-ea10-4120-ba77-54b99665a4c7"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Curso/Instituição: </style>" +
+$F{nomCur}.toUpperCase() + " - " + $F{nomIns}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-11" style="Label" x="165" y="193" width="50" height="14" uuid="c5fc7256-d096-4d19-87c6-3741d94d0469"/>
+				<text><![CDATA[Conclusão:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="356" y="322" width="175" height="31" uuid="921bfc28-29e3-46c7-b1e9-157ef5a5b72c"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement style="campo" x="205" y="193" width="52" height="14" uuid="91f71c6f-5e7d-4979-8da3-64bea2d4aaa6"/>
+				<textFieldExpression><![CDATA[$F{datCon}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-67" style="Label" x="356" y="322" width="79" height="31" uuid="5b93a47a-11c8-4a5d-80ee-f02d831af760"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Horário na semana:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-66" style="Label" x="405" y="178" width="75" height="14" uuid="507b021e-17ee-4761-8b3d-1339176c2b6d"/>
+				<text><![CDATA[Adicionais:]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0.00">
+				<reportElement style="campo" x="447" y="178" width="85" height="14" uuid="55d147bc-a7ea-4685-a092-d9acbfc70d8d"/>
+				<textFieldExpression><![CDATA[$F{vlrAdi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-6" style="Label" x="5" y="87" width="97" height="14" uuid="fa949333-67c3-48ad-9bf2-1ff055ae3f20"/>
+				<text><![CDATA[Filiação: Pai / Mãe:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="439" width="534" height="35" uuid="936c9e34-5abf-4b3d-a171-e9ca13c1d7ae"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement style="campo" x="88" y="87" width="318" height="14" uuid="051a71c6-b8a2-430f-b7d7-f5a23f730fb1"/>
+				<textFieldExpression><![CDATA[($F{nomPai} + " / " +$F{nomMae}).toUpperCase()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-38" mode="Opaque" x="0" y="439" width="534" height="14" backcolor="#ECEBEB" uuid="f6e3a8cd-07cf-4cba-8a2e-7178dfbcdc8c"/>
+				<box leftPadding="6">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[VALE TRANSPORTE]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="campo" x="6" y="456" width="118" height="14" uuid="9918c1b7-1a20-4248-aa44-91af8c0b9d92"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Quantidade mensal: </style>" +
+$F{qvtMes}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement style="campo" x="130" y="456" width="101" height="14" uuid="55a4a39f-2f0f-49ba-b9b2-724ab8b2298c"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Valor mensal: </style>" +
+$F{vvtMes}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement key="rectangle-13" x="331" y="496" width="17" height="14" uuid="2c1b17a7-1a36-4e70-8c49-4bcde8a93f31"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="479" width="534" height="35" uuid="499033e9-2a5a-44a2-85e5-54e403a8078e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement style="campo" x="241" y="456" width="163" height="14" uuid="77188bcd-5453-43c1-b603-6a190040d760">
+					<printWhenExpression><![CDATA[new Boolean($F{descricao} != null)]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Meio de transporte: </style>" +
+$F{descricao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-65" style="Label" x="5" y="496" width="530" height="14" uuid="61bd753e-7319-4a17-9164-546a7abc4413"/>
+				<text><![CDATA[Realizou o pagamento da Contribuição Sindical referente ao ano em exercício?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-38" mode="Opaque" x="0" y="479" width="534" height="14" backcolor="#ECEBEB" uuid="08a73ed4-d4e2-40b1-9fed-8684ffb12287"/>
+				<box leftPadding="6">
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Verdana" size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[CONTRIBUIÇÃO SINDICAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-74" x="331" y="496" width="17" height="14" uuid="5bbb0ca4-3e55-4874-907d-1698b6af2158">
+					<printWhenExpression><![CDATA[$F{pagSin}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-45" style="Label" x="389" y="496" width="22" height="14" uuid="d37ce439-d5df-476f-abfa-8c19aec1fab0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Não]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="356" y="354" width="175" height="30" uuid="cc236c2c-b2f3-4434-a57c-1ab16398e015"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-45" style="Label" x="348" y="496" width="22" height="14" uuid="2cc87f07-e737-46fb-a7a7-999d6eb514f1"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Sim]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement key="rectangle-13" x="371" y="496" width="17" height="14" uuid="6586ba7f-9fb0-42ef-8f0d-ecff5507c6b3"/>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-74" x="370" y="496" width="17" height="14" uuid="f7755acc-a169-4886-b7e4-b752723c808e">
+					<printWhenExpression><![CDATA[new Boolean($F{pagSin}.booleanValue()==false)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="494" width="116" height="20" isPrintWhenDetailOverflows="true" uuid="cff0bcaf-94b2-4f2a-9b05-00f2d4a4c05e">
+					<printWhenExpression><![CDATA[$F{pagSin}]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Times New Roman" size="7" isItalic="true" pdfFontName="Times-Italic"/>
+				</textElement>
+				<text><![CDATA[Enviar em anexo cópia do comprovante do desconto da contribuição ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-43" style="Label" x="221" y="322" width="57" height="33" uuid="9a6da8b8-252d-4748-a6f6-410f95854b95"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Carga horária:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="284" y="322" width="67" height="10" uuid="d70b3aa3-4f3a-47de-ae8e-987e0fb72c6b"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Diária: </style>" +
+$F{horDia}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="284" y="334" width="67" height="10" uuid="04e93ae0-7caf-4af6-8d45-6d29abc51701"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Semanal: </style>" +
+$F{horSem}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" style="campo" x="284" y="346" width="67" height="10" uuid="c72c0a2e-5743-4c85-960e-cd10c707bca2"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Mensal: </style>" +
+$F{horMes}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement key="rectangle-6" mode="Transparent" x="0" y="37" width="535" height="170" uuid="49802732-14ef-42ef-946b-90287606fcc0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="303" width="535" height="132" uuid="d5a84d9a-53fd-4bd8-8708-4e76be907a7e"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<elementGroup>
+				<staticText>
+					<reportElement x="2" y="702" width="26" height="10" uuid="1402a61d-ecef-4585-9b1b-8e1d7b5e8b2b"/>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="7"/>
+					</textElement>
+					<text><![CDATA[Nome:]]></text>
+				</staticText>
+				<line>
+					<reportElement key="line-1" x="32" y="712" width="116" height="1" uuid="545b5c44-15e6-4e9e-99cd-517bd90a71d1"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="2" y="714" width="26" height="10" uuid="fb02c1b0-8a1f-4472-99d1-4fc76da5d808"/>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="7"/>
+					</textElement>
+					<text><![CDATA[Data:]]></text>
+				</staticText>
+				<line>
+					<reportElement key="line-1" x="33" y="722" width="116" height="1" uuid="32df3692-88f9-4d2f-88eb-5d77d1a6fccf"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement key="line-1" x="173" y="712" width="116" height="1" uuid="5fa6fb64-550c-4f37-97ad-2468f1fe6447"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement key="line-1" x="173" y="722" width="116" height="1" uuid="527dee9a-d4a1-42fb-9d69-04c6296a758e"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement key="line-1" x="304" y="712" width="116" height="1" uuid="09bd4c52-3595-49ec-877d-7825db24e1be"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement key="line-1" x="430" y="712" width="104" height="1" uuid="76111aa4-c73a-418a-a44e-054e706c1fa0"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement key="line-1" x="431" y="722" width="104" height="1" uuid="257d4559-024e-4751-9a94-3051a6ab47aa"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="1" y="679" width="39" height="10" uuid="fd38427c-989e-443d-8c6d-e5d6ea49d170"/>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="7"/>
+					</textElement>
+					<text><![CDATA[Assinatura:]]></text>
+				</staticText>
+			</elementGroup>
+			<line>
+				<reportElement key="line-1" x="304" y="722" width="116" height="1" uuid="489bc1d6-1e58-4181-bdd7-76626ddd2ae6"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement key="staticText-22" style="Label" x="415" y="72" width="50" height="14" uuid="7e7748af-7d86-4873-a9f7-6a456f8ef1de"/>
+				<text><![CDATA[Raça/Cor:]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="campo" x="453" y="72" width="67" height="14" uuid="ca7d2c19-a845-4030-87ac-17e55fac1bb2"/>
+				<textFieldExpression><![CDATA[$F{racaCor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="campo" x="309" y="164" width="165" height="13" uuid="084dd0ea-2313-468e-93c0-7b788b9a0bbf"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Cert. Reservista: </style>" +
+$F{numRes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="3" width="529" height="12" uuid="26f20a1f-462c-4ec7-994d-d1b7cdaa7581"/>
+				<textElement markup="styled">
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Times-Bold'>Empresa: </style>" + $F{id_empresaColaborador} + " - " + $F{nomEmp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-34" style="Label" x="6" y="566" width="129" height="14" uuid="031721d1-fced-4641-a85d-50ec0468aba7"/>
+				<textElement>
+					<font isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Data do curso de formação:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-16" style="Label" x="320" y="116" width="90" height="14" uuid="59c93e26-bb04-4513-87fb-92f4499a757f"/>
+				<text><![CDATA[Nacionalidade:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="116" width="100" height="20" uuid="f8b5c51f-9b70-4bb3-a9d1-eabc24dcc920"/>
+				<textFieldExpression><![CDATA[$F{desNac}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement key="rectangle-4" mode="Transparent" x="0" y="0" width="535" height="16" uuid="c3ffb711-9db8-4ba7-9571-0474c5a72d53"/>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-52" style="Label" x="5" y="0" width="165" height="16" uuid="5828f9ea-7e48-4f37-9e02-b0b88732512e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Local Arquivo: RH/Treinamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-53" style="Label" x="241" y="0" width="62" height="16" uuid="c6f9c24a-a87a-45a3-b685-ee66ffe2cab2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Index: Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-54" style="Label" x="361" y="0" width="165" height="16" uuid="19b86bba-3006-42e5-b2fa-62e219f8ca28"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Tempo mínimo: 01 ano]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-55" x="5" y="16" width="42" height="11" uuid="33cda8d6-eecf-4aac-9497-51327eabe760"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Verdana" size="6"/>
+				</textElement>
+				<text><![CDATA[Rev. 08]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-56" x="470" y="16" width="55" height="11" uuid="ec90447f-b16e-482d-9bc5-2b8890342922"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Verdana" size="6"/>
+				</textElement>
+				<text><![CDATA[Data: 01/08/08]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

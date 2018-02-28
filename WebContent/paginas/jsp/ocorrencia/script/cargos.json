@@ -1,0 +1,1242 @@
+{"items": [
+  {
+    "id": {
+      "codCar": "000000165",
+      "estCar": 1
+    },
+    "name": "Administrador de Empresa"
+  },
+  {
+    "id": {
+      "codCar": "000000175",
+      "estCar": 1
+    },
+    "name": "Advogado"
+  },
+  {
+    "id": {
+      "codCar": "000000095",
+      "estCar": 1
+    },
+    "name": "Agente Adm Comercial"
+  },
+  {
+    "id": {
+      "codCar": "000000070",
+      "estCar": 1
+    },
+    "name": "Agente Comercial"
+  },
+  {
+    "id": {
+      "codCar": "000000140",
+      "estCar": 1
+    },
+    "name": "Agente Comunitário"
+  },
+  {
+    "id": {
+      "codCar": "000000069",
+      "estCar": 1
+    },
+    "name": "Agente de Vendas"
+  },
+  {
+    "id": {
+      "codCar": "000000004",
+      "estCar": 1
+    },
+    "name": "Agente Vendas e Serviços"
+  },
+  {
+    "id": {
+      "codCar": "000000019",
+      "estCar": 1
+    },
+    "name": "Ajudante de Carga/Descarg"
+  },
+  {
+    "id": {
+      "codCar": "000000096",
+      "estCar": 1
+    },
+    "name": "Ajudante de Operador"
+  },
+  {
+    "id": {
+      "codCar": "000000005",
+      "estCar": 1
+    },
+    "name": "Almoxarife"
+  },
+  {
+    "id": {
+      "codCar": "000000097",
+      "estCar": 1
+    },
+    "name": "Analista Administrativo"
+  },
+  {
+    "id": {
+      "codCar": "000000098",
+      "estCar": 1
+    },
+    "name": "Analista Contas a Pagar"
+  },
+  {
+    "id": {
+      "codCar": "000000099",
+      "estCar": 1
+    },
+    "name": "Analista de Custos"
+  },
+  {
+    "id": {
+      "codCar": "000000006",
+      "estCar": 1
+    },
+    "name": "Analista de Folha Pagto"
+  },
+  {
+    "id": {
+      "codCar": "000000127",
+      "estCar": 1
+    },
+    "name": "Analista De Marketing"
+  },
+  {
+    "id": {
+      "codCar": "000000008",
+      "estCar": 1
+    },
+    "name": "Analista de Rec. Humanos"
+  },
+  {
+    "id": {
+      "codCar": "000000009",
+      "estCar": 1
+    },
+    "name": "Analista de Vendas"
+  },
+  {
+    "id": {
+      "codCar": "000000007",
+      "estCar": 1
+    },
+    "name": "Analista Plan. Financeiro"
+  },
+  {
+    "id": {
+      "codCar": "000000101",
+      "estCar": 1
+    },
+    "name": "Analista Tec. Informatica"
+  },
+  {
+    "id": {
+      "codCar": "000000100",
+      "estCar": 1
+    },
+    "name": "Arrumador de Carga"
+  },
+  {
+    "id": {
+      "codCar": "000000135",
+      "estCar": 1
+    },
+    "name": "Ascensorista"
+  },
+  {
+    "id": {
+      "codCar": "000000071",
+      "estCar": 1
+    },
+    "name": "Assessor Comercial"
+  },
+  {
+    "id": {
+      "codCar": "000000102",
+      "estCar": 1
+    },
+    "name": "Assessor da Diretoria"
+  },
+  {
+    "id": {
+      "codCar": "000000013",
+      "estCar": 1
+    },
+    "name": "Assist. Administrativo"
+  },
+  {
+    "id": {
+      "codCar": "000000011",
+      "estCar": 1
+    },
+    "name": "Assist. de Pessoal "
+  },
+  {
+    "id": {
+      "codCar": "000000012",
+      "estCar": 1
+    },
+    "name": "Assist. Tec. Manut. Elet."
+  },
+  {
+    "id": {
+      "codCar": "000000072",
+      "estCar": 1
+    },
+    "name": "Assistent. Almoxarifado"
+  },
+  {
+    "id": {
+      "codCar": "000000073",
+      "estCar": 1
+    },
+    "name": "Assistent. de Operações"
+  },
+  {
+    "id": {
+      "codCar": "000000010",
+      "estCar": 1
+    },
+    "name": "Assistente Administrativo"
+  },
+  {
+    "id": {
+      "codCar": "000000074",
+      "estCar": 1
+    },
+    "name": "Assistente Comercial"
+  },
+  {
+    "id": {
+      "codCar": "000000075",
+      "estCar": 1
+    },
+    "name": "Assistente de Custos"
+  },
+  {
+    "id": {
+      "codCar": "000000168",
+      "estCar": 1
+    },
+    "name": "Assistente de Faturamento"
+  },
+  {
+    "id": {
+      "codCar": "000000014",
+      "estCar": 1
+    },
+    "name": "Assistente de Faturamento"
+  },
+  {
+    "id": {
+      "codCar": "000000016",
+      "estCar": 1
+    },
+    "name": "Assistente de Vendas"
+  },
+  {
+    "id": {
+      "codCar": "000000076",
+      "estCar": 1
+    },
+    "name": "Assistente Operacional"
+  },
+  {
+    "id": {
+      "codCar": "000000015",
+      "estCar": 1
+    },
+    "name": "Assistente Rec. Humanos"
+  },
+  {
+    "id": {
+      "codCar": "000000017",
+      "estCar": 1
+    },
+    "name": "Atendente Comercial"
+  },
+  {
+    "id": {
+      "codCar": "000000018",
+      "estCar": 1
+    },
+    "name": "Auditor de Processos"
+  },
+  {
+    "id": {
+      "codCar": "000000169",
+      "estCar": 1
+    },
+    "name": "Aux. de Enfermagem do Trabalho"
+  },
+  {
+    "id": {
+      "codCar": "000000021",
+      "estCar": 1
+    },
+    "name": "Aux. Tec. Manut. Eletron"
+  },
+  {
+    "id": {
+      "codCar": "000000129",
+      "estCar": 1
+    },
+    "name": "Aux.Tec.Manut.Eletrônica"
+  },
+  {
+    "id": {
+      "codCar": "000000020",
+      "estCar": 1
+    },
+    "name": "Auxilar de Cozinha"
+  },
+  {
+    "id": {
+      "codCar": "000000139",
+      "estCar": 1
+    },
+    "name": "Auxiliar Administrativo"
+  },
+  {
+    "id": {
+      "codCar": "000000167",
+      "estCar": 1
+    },
+    "name": "AUXILIAR DE ALMOXARIFE"
+  },
+  {
+    "id": {
+      "codCar": "000000103",
+      "estCar": 1
+    },
+    "name": "Auxiliar de Deposito"
+  },
+  {
+    "id": {
+      "codCar": "000000003",
+      "estCar": 1
+    },
+    "name": "Auxiliar de Escritorio"
+  },
+  {
+    "id": {
+      "codCar": "000000128",
+      "estCar": 1
+    },
+    "name": "Auxiliar De Pessoal"
+  },
+  {
+    "id": {
+      "codCar": "000000104",
+      "estCar": 1
+    },
+    "name": "Auxiliar de Produção"
+  },
+  {
+    "id": {
+      "codCar": "000000022",
+      "estCar": 1
+    },
+    "name": "Auxiliar de Recepção"
+  },
+  {
+    "id": {
+      "codCar": "161",
+      "estCar": 1
+    },
+    "name": "AUXILIAR DE SEGURANÇA"
+  },
+  {
+    "id": {
+      "codCar": "000000164",
+      "estCar": 1
+    },
+    "name": "Auxiliar de Segurança"
+  },
+  {
+    "id": {
+      "codCar": "162",
+      "estCar": 1
+    },
+    "name": "Auxiliar de Segurança"
+  },
+  {
+    "id": {
+      "codCar": "000000105",
+      "estCar": 1
+    },
+    "name": "Auxiliar de Supervisão"
+  },
+  {
+    "id": {
+      "codCar": "000000136",
+      "estCar": 1
+    },
+    "name": "Auxiliar Financeira"
+  },
+  {
+    "id": {
+      "codCar": "000000077",
+      "estCar": 1
+    },
+    "name": "Auxiliar Operacional"
+  },
+  {
+    "id": {
+      "codCar": "000000088",
+      "estCar": 1
+    },
+    "name": "Auxiliar Serviços Gerais"
+  },
+  {
+    "id": {
+      "codCar": "000000023",
+      "estCar": 1
+    },
+    "name": "Balanceiro"
+  },
+  {
+    "id": {
+      "codCar": "000000024",
+      "estCar": 1
+    },
+    "name": "Camareira"
+  },
+  {
+    "id": {
+      "codCar": "000000000",
+      "estCar": 1
+    },
+    "name": "Cargo Inicial"
+  },
+  {
+    "id": {
+      "codCar": "000000147",
+      "estCar": 1
+    },
+    "name": "Carregador"
+  },
+  {
+    "id": {
+      "codCar": "000000107",
+      "estCar": 1
+    },
+    "name": "Chefe de Escritorio"
+  },
+  {
+    "id": {
+      "codCar": "000000106",
+      "estCar": 1
+    },
+    "name": "Chefe Escrit. Em Geral"
+  },
+  {
+    "id": {
+      "codCar": "000000025",
+      "estCar": 1
+    },
+    "name": "Conferente de Carga "
+  },
+  {
+    "id": {
+      "codCar": "000000078",
+      "estCar": 1
+    },
+    "name": "Consultor de Vendas"
+  },
+  {
+    "id": {
+      "codCar": "000000026",
+      "estCar": 1
+    },
+    "name": "Controlador de Frota"
+  },
+  {
+    "id": {
+      "codCar": "000000028",
+      "estCar": 1
+    },
+    "name": "Cood. Setor Pessoal"
+  },
+  {
+    "id": {
+      "codCar": "000000108",
+      "estCar": 1
+    },
+    "name": "Coord. Adm. Operações"
+  },
+  {
+    "id": {
+      "codCar": "000000029",
+      "estCar": 1
+    },
+    "name": "Coord. Administrativo"
+  },
+  {
+    "id": {
+      "codCar": "000000027",
+      "estCar": 1
+    },
+    "name": "Coord. Assuntos Qualidade"
+  },
+  {
+    "id": {
+      "codCar": "000000030",
+      "estCar": 1
+    },
+    "name": "Coord. de Vendas"
+  },
+  {
+    "id": {
+      "codCar": "000000112",
+      "estCar": 1
+    },
+    "name": "Coord. Oper. de Eletronic"
+  },
+  {
+    "id": {
+      "codCar": "000000153",
+      "estCar": 1
+    },
+    "name": "Coordenador Comercial"
+  },
+  {
+    "id": {
+      "codCar": "000000110",
+      "estCar": 1
+    },
+    "name": "Coordenador de Operações"
+  },
+  {
+    "id": {
+      "codCar": "000000160",
+      "estCar": 1
+    },
+    "name": "Coordenador de Segurança"
+  },
+  {
+    "id": {
+      "codCar": "000000111",
+      "estCar": 1
+    },
+    "name": "Coordenador Eletronica"
+  },
+  {
+    "id": {
+      "codCar": "000000109",
+      "estCar": 1
+    },
+    "name": "Coordenador Financeiro"
+  },
+  {
+    "id": {
+      "codCar": "000000155",
+      "estCar": 1
+    },
+    "name": "Coordenador Operacinal"
+  },
+  {
+    "id": {
+      "codCar": "000000031",
+      "estCar": 1
+    },
+    "name": "Copeira"
+  },
+  {
+    "id": {
+      "codCar": "000000032",
+      "estCar": 1
+    },
+    "name": "Cozinheiro"
+  },
+  {
+    "id": {
+      "codCar": "000000079",
+      "estCar": 1
+    },
+    "name": "Degustador"
+  },
+  {
+    "id": {
+      "codCar": "000000033",
+      "estCar": 1
+    },
+    "name": "Digitador"
+  },
+  {
+    "id": {
+      "codCar": "000000138",
+      "estCar": 1
+    },
+    "name": "Diretor"
+  },
+  {
+    "id": {
+      "codCar": "000000154",
+      "estCar": 1
+    },
+    "name": "Diretor Financeiro"
+  },
+  {
+    "id": {
+      "codCar": "000000171",
+      "estCar": 1
+    },
+    "name": "Enc Compras e Almoxarifado"
+  },
+  {
+    "id": {
+      "codCar": "000000137",
+      "estCar": 1
+    },
+    "name": "Enc. Manut.Eletronica"
+  },
+  {
+    "id": {
+      "codCar": "000000158",
+      "estCar": 1
+    },
+    "name": "Encar. Nivel II-Superv Limpeza"
+  },
+  {
+    "id": {
+      "codCar": "000000170",
+      "estCar": 1
+    },
+    "name": "Encarreg Limp 110h 3 a 10 func"
+  },
+  {
+    "id": {
+      "codCar": "000000034",
+      "estCar": 1
+    },
+    "name": "Encarreg. Almoxarifado"
+  },
+  {
+    "id": {
+      "codCar": "000000114",
+      "estCar": 1
+    },
+    "name": "Encarreg. Serv. tec. Ele"
+  },
+  {
+    "id": {
+      "codCar": "000000113",
+      "estCar": 1
+    },
+    "name": "Encarreg. Setor de Seg."
+  },
+  {
+    "id": {
+      "codCar": "000000080",
+      "estCar": 1
+    },
+    "name": "Encarregado Operacional"
+  },
+  {
+    "id": {
+      "codCar": "000000035",
+      "estCar": 1
+    },
+    "name": "Eng. Seg. Trabalho"
+  },
+  {
+    "id": {
+      "codCar": "000000159",
+      "estCar": 1
+    },
+    "name": "Engarreg Limpeza 11 a 20 func"
+  },
+  {
+    "id": {
+      "codCar": "000000142",
+      "estCar": 1
+    },
+    "name": "Engarreg. Limpeza 3 a 10 func"
+  },
+  {
+    "id": {
+      "codCar": "000000115",
+      "estCar": 1
+    },
+    "name": "Fiscal de Alojamento"
+  },
+  {
+    "id": {
+      "codCar": "000000036",
+      "estCar": 1
+    },
+    "name": "Fiscal de Vigilancia"
+  },
+  {
+    "id": {
+      "codCar": "000000149",
+      "estCar": 1
+    },
+    "name": "Garagista"
+  },
+  {
+    "id": {
+      "codCar": "000000116",
+      "estCar": 1
+    },
+    "name": "Gerente "
+  },
+  {
+    "id": {
+      "codCar": "000000037",
+      "estCar": 1
+    },
+    "name": "Gerente Adimistrativo"
+  },
+  {
+    "id": {
+      "codCar": "000000002",
+      "estCar": 1
+    },
+    "name": "Gerente Administrativo"
+  },
+  {
+    "id": {
+      "codCar": "000000038",
+      "estCar": 1
+    },
+    "name": "Gerente Comercial"
+  },
+  {
+    "id": {
+      "codCar": "000000039",
+      "estCar": 1
+    },
+    "name": "Gerente de Contas"
+  },
+  {
+    "id": {
+      "codCar": "000000081",
+      "estCar": 1
+    },
+    "name": "Gerente de Custos"
+  },
+  {
+    "id": {
+      "codCar": "000000083",
+      "estCar": 1
+    },
+    "name": "Gerente de Escritório"
+  },
+  {
+    "id": {
+      "codCar": "000000084",
+      "estCar": 1
+    },
+    "name": "Gerente de Negócios"
+  },
+  {
+    "id": {
+      "codCar": "000000082",
+      "estCar": 1
+    },
+    "name": "Gerente de Operações"
+  },
+  {
+    "id": {
+      "codCar": "000000040",
+      "estCar": 1
+    },
+    "name": "Gerente de RH"
+  },
+  {
+    "id": {
+      "codCar": "000000085",
+      "estCar": 1
+    },
+    "name": "Gerente de Unidade"
+  },
+  {
+    "id": {
+      "codCar": "000000041",
+      "estCar": 1
+    },
+    "name": "Gerente de Vendas"
+  },
+  {
+    "id": {
+      "codCar": "000000042",
+      "estCar": 1
+    },
+    "name": "Gerente Financeiro"
+  },
+  {
+    "id": {
+      "codCar": "000000043",
+      "estCar": 1
+    },
+    "name": "Gerente Operacional"
+  },
+  {
+    "id": {
+      "codCar": "141",
+      "estCar": 1
+    },
+    "name": "Gerente Regional"
+  },
+  {
+    "id": {
+      "codCar": "000000163",
+      "estCar": 1
+    },
+    "name": "Gestor de Tecnologia"
+  },
+  {
+    "id": {
+      "codCar": "000000044",
+      "estCar": 1
+    },
+    "name": "Guardete"
+  },
+  {
+    "id": {
+      "codCar": "000000045",
+      "estCar": 1
+    },
+    "name": "Jardineiro"
+  },
+  {
+    "id": {
+      "codCar": "000000152",
+      "estCar": 1
+    },
+    "name": "Jovem Aprendiz"
+  },
+  {
+    "id": {
+      "codCar": "000000117",
+      "estCar": 1
+    },
+    "name": "Lider de Grupo"
+  },
+  {
+    "id": {
+      "codCar": "000000046",
+      "estCar": 1
+    },
+    "name": "Medico do trabalho"
+  },
+  {
+    "id": {
+      "codCar": "000000118",
+      "estCar": 1
+    },
+    "name": "Menor Aprendiz"
+  },
+  {
+    "id": {
+      "codCar": "000000119",
+      "estCar": 1
+    },
+    "name": "Merendeira"
+  },
+  {
+    "id": {
+      "codCar": "000000047",
+      "estCar": 1
+    },
+    "name": "Mot. Onibus Rodoviario"
+  },
+  {
+    "id": {
+      "codCar": "000000086",
+      "estCar": 1
+    },
+    "name": "Motorist. Coleta/Entrega"
+  },
+  {
+    "id": {
+      "codCar": "000000087",
+      "estCar": 1
+    },
+    "name": "Motorista"
+  },
+  {
+    "id": {
+      "codCar": "000000089",
+      "estCar": 1
+    },
+    "name": "Office-Boy"
+  },
+  {
+    "id": {
+      "codCar": "000000120",
+      "estCar": 1
+    },
+    "name": "Oper. Maq. Roçadeira"
+  },
+  {
+    "id": {
+      "codCar": "000000157",
+      "estCar": 1
+    },
+    "name": "Operador de Câmera Externa"
+  },
+  {
+    "id": {
+      "codCar": "000000121",
+      "estCar": 1
+    },
+    "name": "Operador de CFTV"
+  },
+  {
+    "id": {
+      "codCar": "000000048",
+      "estCar": 1
+    },
+    "name": "Operador de Empilhadeira"
+  },
+  {
+    "id": {
+      "codCar": "000000124",
+      "estCar": 1
+    },
+    "name": "Operador de Maquina"
+  },
+  {
+    "id": {
+      "codCar": "000000123",
+      "estCar": 1
+    },
+    "name": "Operador de Secador"
+  },
+  {
+    "id": {
+      "codCar": "000000049",
+      "estCar": 1
+    },
+    "name": "Operador de Sistema"
+  },
+  {
+    "id": {
+      "codCar": "000000122",
+      "estCar": 1
+    },
+    "name": "Operador Maquina Costal/Roçadeira"
+  },
+  {
+    "id": {
+      "codCar": "000000050",
+      "estCar": 1
+    },
+    "name": "Pedreiro"
+  },
+  {
+    "id": {
+      "codCar": "000000051",
+      "estCar": 1
+    },
+    "name": "Pedreiro de Alvenaria"
+  },
+  {
+    "id": {
+      "codCar": "000000052",
+      "estCar": 1
+    },
+    "name": "Porteiro"
+  },
+  {
+    "id": {
+      "codCar": "000000148",
+      "estCar": 1
+    },
+    "name": "Porteiro SDF"
+  },
+  {
+    "id": {
+      "codCar": "000000053",
+      "estCar": 1
+    },
+    "name": "Programador de Computador"
+  },
+  {
+    "id": {
+      "codCar": "000000054",
+      "estCar": 1
+    },
+    "name": "Promotor de Vendas"
+  },
+  {
+    "id": {
+      "codCar": "000000055",
+      "estCar": 1
+    },
+    "name": "Recepcionista"
+  },
+  {
+    "id": {
+      "codCar": "000000056",
+      "estCar": 1
+    },
+    "name": "Repositor de Mercadorias"
+  },
+  {
+    "id": {
+      "codCar": "000000156",
+      "estCar": 1
+    },
+    "name": "Repórter"
+  },
+  {
+    "id": {
+      "codCar": "000000057",
+      "estCar": 1
+    },
+    "name": "Secretária"
+  },
+  {
+    "id": {
+      "codCar": "000000092",
+      "estCar": 1
+    },
+    "name": "Seperv. Manut. Eletronica"
+  },
+  {
+    "id": {
+      "codCar": "000000166",
+      "estCar": 1
+    },
+    "name": "Servente"
+  },
+  {
+    "id": {
+      "codCar": "000000173",
+      "estCar": 1
+    },
+    "name": "Servente (75 horas mês)"
+  },
+  {
+    "id": {
+      "codCar": "000000145",
+      "estCar": 1
+    },
+    "name": "Servente de 20 horas (100)"
+  },
+  {
+    "id": {
+      "codCar": "000000131",
+      "estCar": 1
+    },
+    "name": "Servente de 22 Horas (110)"
+  },
+  {
+    "id": {
+      "codCar": "000000144",
+      "estCar": 1
+    },
+    "name": "Servente de 24 horas (120)"
+  },
+  {
+    "id": {
+      "codCar": "000000134",
+      "estCar": 1
+    },
+    "name": "Servente de 30 horas (150)"
+  },
+  {
+    "id": {
+      "codCar": "000000133",
+      "estCar": 1
+    },
+    "name": "Servente de 33 horas (165)"
+  },
+  {
+    "id": {
+      "codCar": "000000130",
+      "estCar": 1
+    },
+    "name": "Servente de 36 Horas (180)"
+  },
+  {
+    "id": {
+      "codCar": "000000132",
+      "estCar": 1
+    },
+    "name": "Servente de 40 horas (200)"
+  },
+  {
+    "id": {
+      "codCar": "000000058",
+      "estCar": 1
+    },
+    "name": "Servente de 44 Horas (220)"
+  },
+  {
+    "id": {
+      "codCar": "000000150",
+      "estCar": 1
+    },
+    "name": "Servente Horista"
+  },
+  {
+    "id": {
+      "codCar": "000000143",
+      "estCar": 1
+    },
+    "name": "Servente Lider"
+  },
+  {
+    "id": {
+      "codCar": "000000176",
+      "estCar": 1
+    },
+    "name": "Servente(10 horas) 50"
+  },
+  {
+    "id": {
+      "codCar": "000000125",
+      "estCar": 1
+    },
+    "name": "Superintendente"
+  },
+  {
+    "id": {
+      "codCar": "000000068",
+      "estCar": 1
+    },
+    "name": "Supervisor"
+  },
+  {
+    "id": {
+      "codCar": "000000090",
+      "estCar": 1
+    },
+    "name": "Supervisor de Limpeza"
+  },
+  {
+    "id": {
+      "codCar": "000000091",
+      "estCar": 1
+    },
+    "name": "Supervisor de Monitoramento"
+  },
+  {
+    "id": {
+      "codCar": "000000059",
+      "estCar": 1
+    },
+    "name": "Supervisor de Segurança"
+  },
+  {
+    "id": {
+      "codCar": "000000093",
+      "estCar": 1
+    },
+    "name": "Supervisor de Serviços"
+  },
+  {
+    "id": {
+      "codCar": "000000060",
+      "estCar": 1
+    },
+    "name": "Supervisor de Vendas"
+  },
+  {
+    "id": {
+      "codCar": "000000094",
+      "estCar": 1
+    },
+    "name": "Supervisor Operacional"
+  },
+  {
+    "id": {
+      "codCar": "000000063",
+      "estCar": 1
+    },
+    "name": "Tec. de Sup. de Sistemas"
+  },
+  {
+    "id": {
+      "codCar": "000000061",
+      "estCar": 1
+    },
+    "name": "Tec. Manut. Eletronica"
+  },
+  {
+    "id": {
+      "codCar": "000000062",
+      "estCar": 1
+    },
+    "name": "Tec. Segurança Trabalho"
+  },
+  {
+    "id": {
+      "codCar": "000000064",
+      "estCar": 1
+    },
+    "name": "Tecnico em Informatica"
+  },
+  {
+    "id": {
+      "codCar": "000000065",
+      "estCar": 1
+    },
+    "name": "Telefonista"
+  },
+  {
+    "id": {
+      "codCar": "000000174",
+      "estCar": 1
+    },
+    "name": "Técnico Enfermagem do Trabalho"
+  },
+  {
+    "id": {
+      "codCar": "000000146",
+      "estCar": 1
+    },
+    "name": "Varredor/Coletor"
+  },
+  {
+    "id": {
+      "codCar": "000000066",
+      "estCar": 1
+    },
+    "name": "Vigia"
+  },
+  {
+    "id": {
+      "codCar": "000000172",
+      "estCar": 1
+    },
+    "name": "VIGIA SDF"
+  },
+  {
+    "id": {
+      "codCar": "000000001",
+      "estCar": 1
+    },
+    "name": "Vigilante"
+  },
+  {
+    "id": {
+      "codCar": "000000126",
+      "estCar": 1
+    },
+    "name": "Vigilante Lider"
+  },
+  {
+    "id": {
+      "codCar": "000000151",
+      "estCar": 1
+    },
+    "name": "Vigilante/Segurança Pessoal"
+  },
+  {
+    "id": {
+      "codCar": "000000067",
+      "estCar": 1
+    },
+    "name": "Zelador"
+  }
+], identifier: "name"}
+
